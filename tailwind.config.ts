@@ -16,9 +16,10 @@ const config: Config = {
     },
     extend: {
       colors: {
-        red: "#e81c24",
-        skyBlue: "#1ce8e1",
-
+        bgWhite: "#f8f8fa",
+        orange: "#e8724a",
+        blue: "#013a94",
+        footerBrown: "#231f20",
       }
     },
   },

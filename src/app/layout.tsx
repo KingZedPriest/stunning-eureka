@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { lora } from "./fonts";
+import { nunito } from "./fonts";
 import './globals.css';
 
 // Import Components
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lora.className}>
+      <body className={nunito.className}>
         <Header />
         {children}
         <Footer />

@@ -1,3 +1,2 @@
-import { Montserrat, Lora } from "next/font/google";
-export const montserrat = Montserrat({ subsets: ["latin"], display: "swap", });
-export const lora = Lora({subsets: ["latin"], display: "swap",});
+import { Nunito } from "next/font/google";
+export const nunito = Nunito({ subsets: ["latin"], display: "swap", });
