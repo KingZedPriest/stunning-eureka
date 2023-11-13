@@ -14,7 +14,7 @@ export default function ThirdSection() {
         <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">
           Why United Traverse?
         </h1>
-        <div className="mt-10 flex flex-col-reverse items-center gap-y-10 md:flex-row md:items-start md:justify-between">
+        <div className="mt-20 flex flex-col-reverse items-center gap-y-10 md:flex-row md:items-start md:justify-between">
           <div className="w-full md:w-1/2 lg:w-[45%]">
             <p className="text-sm font-bold sm:text-base md:text-lg lg:text-xl text-orange">
               Unveiling the Advantages of United Traverse
