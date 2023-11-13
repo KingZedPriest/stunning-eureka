@@ -36,7 +36,7 @@ export default function QuoteForm(){
                 <div className="w-full mt-8">
                       <textarea required name="moreDetails" className="resize-none w-full peer focus:outline-none border-b focus:border-orange border-footerBrown px-4 py-[0.425rem] cursor-pointer"/> 
                       <p className="text-xs md:text-sm font-bold relative -top-[6rem] peer-focus:-top-[6.5rem] duration-500">More Details</p>
-                      <p className="text-xs md:text-sm font-bold relative -top-[1.4rem]">Please provide all relevant dimensions, weight, instructions etc</p>
+                      <p className="text-xs font-bold relative -top-[1.4rem]">Please provide all relevant dimensions, weight, instructions etc</p>
                 </div>
                 <input type="submit" value="Submit" className="w-full text-center py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
             </form>
