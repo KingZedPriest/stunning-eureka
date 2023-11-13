@@ -20,6 +20,7 @@ const config: Config = {
         orange: "#e8724a",
         blue: "#013a94",
         footerBrown: "#231f20",
+        lightBlue: "#4a8ae8",
       }
     },
   },

@@ -1,5 +1,9 @@
+//Import Needed Modals
+import StatusModal from "./StatusModal";
 export default function QuoteForm(){
     return(
+        <>
+        <StatusModal status=""/>
         <div className="bg-white px-2 sm:px-4 md:px-6 lg:px-8 py-8 sm:w-[80%] md:w-[90%] lg:w-[60%] mx-auto">
             <p className="text-orange font-bold">Personal Data</p>
             <form className="mt-8">
@@ -34,12 +38,13 @@ export default function QuoteForm(){
                    </div>
                 </div>
                 <div className="w-full mt-8">
-                      <textarea required name="moreDetails" className="resize-none w-full peer focus:outline-none border-b focus:border-orange border-footerBrown px-4 py-[0.425rem] cursor-pointer"/> 
-                      <p className="text-xs md:text-sm font-bold relative -top-[6rem] peer-focus:-top-[6.5rem] duration-500">More Details</p>
+                      <textarea required name="details" className="resize-none w-full peer focus:outline-none border-b focus:border-orange border-footerBrown px-4 py-[0.425rem] cursor-pointer"/> 
+                      <p className="text-xs md:text-sm font-bold relative -top-[6rem] peer-focus:-top-[6.5rem] duration-500">Important Details</p>
                       <p className="text-xs font-bold relative -top-[1.4rem]">Please provide all relevant dimensions, weight, instructions etc</p>
                 </div>
                 <input type="submit" value="Submit" className="w-full text-center py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
             </form>
         </div>
+        </>
     )
 }
