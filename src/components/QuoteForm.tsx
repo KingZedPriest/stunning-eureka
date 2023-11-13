@@ -42,7 +42,7 @@ export default function QuoteForm(){
                       <p className="text-xs md:text-sm font-bold relative -top-[6rem] peer-focus:-top-[6.5rem] duration-500">Important Details</p>
                       <p className="text-xs font-bold relative -top-[1.4rem]">Please provide all relevant dimensions, weight, instructions etc</p>
                 </div>
-                <input type="submit" value="Submit" className="w-full text-center py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
+                <input type="submit" value="Submit" className="w-full text-center py-2 md:py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
             </form>
         </div>
         </>

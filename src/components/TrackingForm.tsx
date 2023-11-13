@@ -9,7 +9,7 @@ export default function TrackingForm(){
                     <input required type="text" name="trackingNumber" className="w-full peer focus:outline-none border-b focus:border-orange border-footerBrown px-4 py-2"/> 
                     <p className="text-xs md:text-sm font-bold relative -top-[3rem] peer-focus:-top-[3.5rem] duration-500">Tracking Number</p>
                 </div>
-                <input type="submit" value="Track" className="w-full text-center py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
+                <input type="submit" value="Track" className="w-full text-center py-2 md:py-3 bg-orange text-white mt-4 hover:bg-blue duration-500 cursor-pointer" />
             </form>
         </div>
     )
