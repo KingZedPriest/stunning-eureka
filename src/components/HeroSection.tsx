@@ -10,10 +10,10 @@ export default function HeroSection(){
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[620] mt-2 md:mt-4">Destination in the World.</h1>
                     <p className="text-sm md:text-base my-4 text-gray-400 font-semibold">Our company offers courier services around the globe.</p>
                     <div className="flex gap-x-5 mt-8">
-                        <Link href="" className="text-sm md:text-base bg-orange border-orange hover:text-orange border-2 p-2 md:px-4 lg:px-8 md:py-3 text-white duration-500 hover:bg-white">
+                        <Link href="" className="transform hover:-translate-y-2 text-sm md:text-base bg-orange border-orange hover:text-orange border-2 p-2 md:px-4 lg:px-8 md:py-3 text-white duration-500 hover:bg-white">
                             Request Quote
                         </Link>
-                        <Link href="" className="text-sm md:text-base bg-orange border-orange hover:text-orange border-2 p-2 md:px-4 lg:px-8 md:py-3 text-white duration-500 hover:bg-white">
+                        <Link href="" className="transform hover:-translate-y-2 text-sm md:text-base bg-orange border-orange hover:text-orange border-2 p-2 md:px-4 lg:px-8 md:py-3 text-white duration-500 hover:bg-white">
                             Track Delivery
                         </Link>
                     </div>

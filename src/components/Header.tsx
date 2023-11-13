@@ -16,37 +16,37 @@ export default function Header() {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
-    <main className="bg-bgWhite px-4 py-2 sm:px-10 md:px-12 md:py-4 lg:px-14">
+    <main className="bg-bgWhite px-4 py-2 sm:px-10 md:px-4 md:py-4 lg:px-14">
           <div className="flex items-center justify-between font-semibold">
               <h1 className="font-bold text-xl tracking-tight md:tracking-[-0.1rem] sm:text-2xl md:text-3xl lg:text-4xl">United <span className="tracking-tight text-orange">Traverse</span><span className="text-4xl">.</span></h1>
-            <div className="hidden md:flex gap-x-5 lg:gap-x-8">
+            <div className="hidden md:flex md:gap-x-2 lg:gap-x-8">
             <Link
                 href="/about"
-                className="transform hover:-translate-y-1 hover:text-orange hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
               >
                 About Us
               </Link>
               <Link
                 href="/services"
-                className="transform hover:-translate-y-1 hover:text-orange hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
               >
                 Services
               </Link>
               <Link
                 href="/company"
-                className="transform hover:-translate-y-1 hover:text-orange hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
               >
                 Why Choose Us
               </Link>
               <Link
                 href="/faq"
-                className="transform hover:-translate-y-1 hover:text-orange hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
               >
                 FAQs
               </Link>
               <Link
                 href="/contact"
-                className="transform hover:-translate-y-1 hover:text-orange hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
               >
                 Contact Us
               </Link>
@@ -69,12 +69,12 @@ export default function Header() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "100%", opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="fixed right-0 top-0 z-10 h-screen w-80 bg-bgWhite p-10 shadow-md"
+                className="md:hidden fixed right-0 top-0 z-50 h-screen w-80 bg-bgWhite p-10 shadow-md"
               >
                     <AiOutlineCloseSquare
                       onClick={toggleOpen}
                       size={30}
-                      className="cursor-pointer text-orange mb-8"
+                      className="cursor-pointer text-orange mb-10"
                     />
                 <div className={`flex flex-col gap-y-5 font-semibold`}>
                 <Link
@@ -107,7 +107,7 @@ export default function Header() {
                   >
                     Contact Us
                   </Link>
-                    <Link href="" className="w-32 text-sm bg-orange border-orange hover:text-orange border-2 px-3 py-2 text-white duration-500 hover:bg-white">
+                    <Link href="" className="mt-4 w-32 text-sm bg-orange border-orange hover:text-orange border-2 px-3 py-2 text-white duration-500 hover:bg-white">
                       Track Delivery
                     </Link>
                 </div>
