@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { nunito } from "./fonts";
+import { roboto } from "./fonts";
 import './globals.css';
 
 // Import Components
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={roboto.className}>
         <Header />
         {children}
         <Footer />

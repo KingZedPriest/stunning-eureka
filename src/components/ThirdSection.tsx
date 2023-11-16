@@ -31,7 +31,7 @@ export default function ThirdSection() {
             </div>
             
           </div>
-          <div className="w-full md:w-1/2 lg:w-[50%] flex flex-col gap-y-6">
+          <div className="w-full md:w-1/2 lg:w-[50%] flex flex-col gap-y-10">
              <div className="flex gap-x-6 items-start">
                 <PiPackageFill size={60} className="text-orange"/>
                 <div>
