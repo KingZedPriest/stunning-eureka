@@ -27,7 +27,7 @@ export default function ThirdSection() {
               knowledgeable staff!
             </p>
             <div className="mt-16">
-                <Link href="/about" className="bg-orange px-10 py-2 md:py-3 hover:bg-black duration-500">Read More</Link>
+                <Link href="/about" className="bg-orange px-10 py-2 md:py-3 hover:bg-blue duration-500">Read More</Link>
             </div>
             
           </div>

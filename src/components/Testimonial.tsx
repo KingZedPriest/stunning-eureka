@@ -45,7 +45,7 @@ export default function Testimonials() {
   };
 
   return (
-    <main className="px-4 pb-[8rem] sm:px-10 md:px-12 lg:px-14">
+    <main className="px-4 sm:px-10 md:px-12 lg:px-14">
       <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">
         What Our Customers Are Saying.
       </h1>
@@ -59,7 +59,7 @@ export default function Testimonials() {
               key={slide.id}
               className={`h-80 min-w-full md:flex md:flex-row md:items-center md:justify-between`}
             >
-              <div className="group h-full w-full bg-bgWhite p-8 duration-500 hover:bg-blue sm:p-10 md:w-[49%] md:p-8 lg:w-[40%] lg:p-6 xl:p-12">
+              <div className="group h-full w-full bg-bgWhite p-8 duration-500 hover:bg-blue sm:p-10 md:w-[49%] md:p-8 lg:w-[40%] lg:p-6 xl:p-8">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-x-5">
                     <Image src={slide.imgSrc} alt="client image" className="w-14 h-14 lg:h-20 lg:w-20" />
@@ -90,7 +90,7 @@ export default function Testimonials() {
                   
                 </div>
               </div>
-              <div className="hidden group md:block h-full w-full bg-bgWhite p-8 duration-500 hover:bg-blue sm:p-10 md:w-[49%] md:p-8 lg:w-[40%] lg:p-6 xl:p-12">
+              <div className="hidden group md:block h-full w-full bg-bgWhite p-8 duration-500 hover:bg-blue sm:p-10 md:w-[49%] md:p-8 lg:w-[40%] lg:p-6 xl:p-8">
               {index + 1 < slides.length &&  (
               <>
               <div className="flex items-center justify-between">

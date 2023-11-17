@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Footer(){
     return(
-        <main className="py-10 px-4 sm:px-10 md:px-12 lg:px-14 bg-footerBrown text-white text-xs sm:text-sm md:text-base">
+        <main className="pt-[14rem] pb-[4rem] px-4 sm:px-10 md:px-12 lg:px-14 bg-footerBrown text-white text-xs sm:text-sm md:text-base">
             <div className="text-white flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between">
             <div className="flex flex-col">
                 <h4 className="font-bold text-orange">Quick Actions</h4>
