@@ -4,6 +4,7 @@ import SecondSection from "@/components/SecondSection";
 import ThirdSection from "@/components/ThirdSection";
 import FourthSection from "@/components/FourthSection";
 import Testimonial from "@/components/Testimonial";
+import Contact from "@/components/Contact";
 import CTA from "@/components/CTA"
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ThirdSection />
       <FourthSection />
       <Testimonial />
+      <Contact />
       <CTA />
     </main>
   )

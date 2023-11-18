@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <main className="bg-bgWhite px-4 py-2 sm:px-10 md:px-4 md:py-4 lg:px-14">
           <div className="flex items-center justify-between font-semibold">
-              <h1 className="font-bold text-xl tracking-tight md:tracking-[-0.1rem] sm:text-2xl md:text-3xl lg:text-4xl">United <span className="tracking-tight text-orange">Traverse</span><span className="text-4xl">.</span></h1>
+              <Link href="/" className="cursor-pointer font-bold text-xl tracking-tight md:tracking-[-0.1rem] sm:text-2xl md:text-3xl lg:text-4xl">United <span className="tracking-tight text-orange">Traverse</span><span className="text-4xl">.</span></Link>
             <div className="hidden md:flex md:gap-x-2 lg:gap-x-8">
             <Link
                 href="/about"
@@ -76,7 +76,13 @@ export default function Header() {
                       size={30}
                       className="cursor-pointer text-orange mb-10"
                     />
-                <div className={`flex flex-col gap-y-5 font-semibold`}>
+                <div className={`flex flex-col gap-y-8 font-semibold`}>
+                <Link
+                    href="/"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                  >
+                    Home
+                  </Link>
                 <Link
                     href="/about"
                     className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"

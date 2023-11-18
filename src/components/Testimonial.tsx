@@ -45,7 +45,7 @@ export default function Testimonials() {
   };
 
   return (
-    <main className="px-4 sm:px-10 md:px-12 lg:px-14">
+    <main className="px-4 sm:px-10 md:px-12 lg:px-14 pb-[8rem]">
       <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">
         What Our Customers Are Saying.
       </h1>
@@ -77,7 +77,7 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="group-hover:text-white">
-                  <p className="text-xs lg:text-sm mt-4  sm:mt-6 lg:mt-8">
+                  <p className="text-xs lg:text-sm mt-4  sm:mt-6 lg:mt-8 font-semibold">
                     {slide.text}
                   </p>
                   <div className="flex gap-x-2 mt-4 sm:mt-6 lg:mt-8">
@@ -110,7 +110,7 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="group-hover:text-white">
-                  <p className="text-xs lg:text-sm mt-4  sm:mt-6 lg:mt-8">
+                  <p className="text-xs lg:text-sm mt-4  sm:mt-6 lg:mt-8 font-semibold">
                     {slides[index + 1].text}
                   </p>
                   <div className="flex gap-x-2 mt-4 sm:mt-6 lg:mt-8">

@@ -4,7 +4,7 @@ import Link from "next/link"
 import ctaImg from "../../public/images/cta.jpeg";
 const CTA = () => {
   return (
-    <main className="relative top-[10rem] mx-auto flex h-[34rem] w-[90%] flex-col  bg-bgWhite shadow-sm sm:w-[80%] md:w-[70%] md:flex-row md:gap-y-0 lg:w-[60%]">
+    <main className="font-semibold relative top-[10rem] mx-auto flex h-[34rem] w-[90%] flex-col  bg-bgWhite shadow-sm sm:w-[80%] md:w-[70%] md:flex-row md:gap-y-0 lg:w-[60%]">
       <div className="h-full w-full md:w-1/2">
         <Image
           src={ctaImg}
