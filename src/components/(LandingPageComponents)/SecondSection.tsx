@@ -12,7 +12,7 @@ export default function Forms(){
     return setQuoteForm((PrevQuoteForm) => !PrevQuoteForm)
   }
     return(
-        <main className="px-4 sm:px-10 md:px-12 lg:px-14">
+        <main className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
             <div className="bg-bgWhite relative z-10 mx-auto -top-[5rem] px-4 py-8 shadow-md"> 
                 <h1 className="capitalize text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center">on the spot freight quotations and tracking.</h1>
                 <div className="flex justify-center mt-10">

@@ -7,14 +7,14 @@ import { FaQuoteRight } from "react-icons/fa";
 import { BsEmojiHeartEyesFill } from "react-icons/bs";
 
 //Import Needed Images
-import c from "../../public/images/c.png";
-import c1 from "../../public/images/c1.png";
-import c2 from "../../public/images/c2.png";
-import c3 from "../../public/images/c3.png";
-import c4 from "../../public/images/c4.png";
-import c5 from "../../public/images/c5.png";
-import c6 from "../../public/images/c6.png";
-import c7 from "../../public/images/c7.png";
+import c from "../../../public/images/c.png";
+import c1 from "../../../public/images/c1.png";
+import c2 from "../../../public/images/c2.png";
+import c3 from "../../../public/images/c3.png";
+import c4 from "../../../public/images/c4.png";
+import c5 from "../../../public/images/c5.png";
+import c6 from "../../../public/images/c6.png";
+import c7 from "../../../public/images/c7.png";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
