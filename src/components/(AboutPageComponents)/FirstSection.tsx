@@ -7,7 +7,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
 const FirstSection = () => {
   return (
-    <main>
+    <main className="py-[8rem] px-4 sm:px-10 md:px-12 lg:px-14">
       <div className="flex flex-col items-center lg:items-end xl:items-center lg:flex-row lg:justify-between gap-y-10 lg:gap-y-0">
         <div className="w-full lg:w-[49%]">
           <p className="mb-8 text-sm text-orange sm:text-base md:text-lg lg:text-xl">
