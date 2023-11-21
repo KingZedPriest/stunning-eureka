@@ -22,31 +22,31 @@ export default function Header() {
             <div className="hidden md:flex md:gap-x-2 lg:gap-x-8">
             <Link
                 href="/about"
-                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange focus:-translate-y-2 focus:translate-x-2 active:text-orange duration-500"
               >
                 About Us
               </Link>
               <Link
                 href="/services"
-                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange focus:-translate-y-2 focus:translate-x-2 active:text-orange duration-500"
               >
                 Services
               </Link>
               <Link
                 href="/company"
-                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange focus:-translate-y-2 focus:translate-x-2 active:text-orange duration-500"
               >
                 Why Choose Us
               </Link>
               <Link
                 href="/faq"
-                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange focus:-translate-y-2 focus:translate-x-2 active:text-orange duration-500"
               >
                 FAQs
               </Link>
               <Link
                 href="/contact"
-                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange active:text-orange duration-500"
+                className="transform hover:-translate-y-1 hover:text-orange md:text-sm lg:text-base hover:translate-x-2 focus:text-orange focus:-translate-y-2 focus:translate-x-2 active:text-orange duration-500"
               >
                 Contact Us
               </Link>
@@ -79,37 +79,37 @@ export default function Header() {
                 <div className={`flex flex-col gap-y-8 font-semibold`}>
                 <Link
                     href="/"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     Home
                   </Link>
                 <Link
                     href="/about"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     About Us
                   </Link>
                   <Link
                     href="/services"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     Services
                   </Link>
                   <Link
                     href="/company"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     Why Choose Us
                   </Link>
                   <Link
                     href="/faq"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     FAQs
                   </Link>
                   <Link
                     href="/contact"
-                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange"
+                    className="duration-500 hover:underline text-sm hover:translate-x-2 hover:-translate-y-2 hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2"
                   >
                     Contact Us
                   </Link>
