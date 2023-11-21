@@ -6,8 +6,8 @@ import FourthSection from "@/components/(LandingPageComponents)/FourthSection";
 import Testimonial from "@/components/(LandingPageComponents)/Testimonial";
 import Contact from "@/components/(LandingPageComponents)/Contact";
 import CTA from "@/components/(LandingPageComponents)/CTA"
-export default async function Home() {
-  await new Promise (resolve => setTimeout(resolve, 6000))
+export default function Home() {
+
   return (
     <main className="bg-white">
       <HeroSection />

@@ -1,5 +1,12 @@
+import SecondHeader from "@/components/SecondHeader";
+
 export default function About() {
+
+    const headerProps = { heading: "About", coloredPart: "Us", route: "About Us" };
+
     return(
-        <h1>About Page</h1>
+        <main>
+            <SecondHeader {...headerProps} />
+        </main>
     )
 }
