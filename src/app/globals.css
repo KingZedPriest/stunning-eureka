@@ -56,3 +56,12 @@
       transform: rotate(-360deg);
     }
   }
+
+/* 404 hollow text */
+.hollowText {
+  color: transparent;
+  -webkit-text-stroke: 2px #e8724a;
+  -webkit-text-fill-color: transparent;
+  -moz-text-stroke: 2px #e8724a;
+  -moz-text-fill-color: transparent;
+  }
