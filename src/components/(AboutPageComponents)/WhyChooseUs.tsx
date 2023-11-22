@@ -1,6 +1,7 @@
 import Image from "next/image";
 //Import images
 import aboutUs from "../../../public/images/aboutUs1.jpeg";
+import logo from "../../../public/images/logo.png";
 //Import Icons
 import { GrChatOption } from "react-icons/gr";
 import { MdSupportAgent } from "react-icons/md";
@@ -8,8 +9,11 @@ const WhyChooseUs = () => {
   return (
     <main className="bg-bgWhite px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14 ">
       <div className="flex flex-col items-center gap-y-10 lg:flex-row lg:items-end lg:justify-between lg:gap-y-0 xl:items-center">
-        <div className="w-full lg:w-[49%]">
-            <Image src={aboutUs} alt="United Warehouse Img" className="rounded-xl"/>
+        <div className="relative w-full lg:w-[49%]">
+            <Image src={aboutUs} alt="United Traverse Warehouse Img" className="rounded-xl"/>
+            <div className="bg-orange rounded-lg shadow-sm w-10 absolute bottom-0 left-0">
+            <Image src={logo} alt="United Traverse Logo"/>
+            </div>
         </div>
         <div className="w-full lg:w-[49%]">
           <p className="mb-8 text-sm text-orange sm:text-base md:text-lg lg:text-xl">
