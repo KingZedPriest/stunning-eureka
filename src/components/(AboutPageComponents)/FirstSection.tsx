@@ -72,12 +72,12 @@ const FirstSection = () => {
           </div>
         </div>
         <div className="w-full lg:w-[49%] relative text-white">
-            <Image src={aboutUs} alt="Elijah Mitchell Image" />
-            <div className="absolute -right-4 sm:-right-8 top-4 p-2 sm:p-4 md:px-8 md:py-4 lg:p-4  lg:px-8 lg:py-4 bg-orange flex flex-col items-center justify-center">
+            <Image src={aboutUs} alt="Elijah Mitchell Image" className="rounded-xl"/>
+            <div className="rounded-lg shadow-md absolute -right-4 sm:-right-8 top-4 p-2 sm:p-4 md:px-8 md:py-4 lg:p-4  lg:px-8 lg:py-4 bg-orange flex flex-col items-center justify-center">
                 <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-[620]">250K<sup>+</sup></h1>
                 <p className="text-xs md:text-sm font-semibold">Client Export & Import</p>
             </div>
-            <div className="absolute -left-4 sm:-left-8 bottom-4 p-2 sm:p-4 md:px-8 md:py-4 lg:p-4 lg:px-8 lg:py-4 bg-blue flex flex-col items-center justify-center">
+            <div className="rounded-lg shadow-md absolute -left-4 sm:-left-8 bottom-4 p-2 sm:p-4 md:px-8 md:py-4 lg:p-4 lg:px-8 lg:py-4 bg-blue flex flex-col items-center justify-center">
                 <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-[620]">4<sup>+</sup></h1>
                 <p className="text-xs md:text-sm font-semibold">Shipping Fleet</p>
             </div>

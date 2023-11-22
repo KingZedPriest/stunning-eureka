@@ -3,6 +3,9 @@ import Image from "next/image";
 import SecondHeader from "@/components/SecondHeader";
 import FirstSection from "@/components/(AboutPageComponents)/FirstSection";
 import SecondSection from "@/components/(AboutPageComponents)/SecondSection";
+import WhyChooseUs from "@/components/(AboutPageComponents)/WhyChooseUs";
+
+import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
 export default function About() {
   const headerProps = {
@@ -16,6 +19,8 @@ export default function About() {
       <SecondHeader {...headerProps} />
         <FirstSection />
         <SecondSection />
+        <WhyChooseUs />
+        <CTA />
     </main>
   );
 }
