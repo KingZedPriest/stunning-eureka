@@ -1,5 +1,21 @@
-export default function Services(){
-    return(
-        <main>Service</main>
-    )
+//Import Header component
+import SecondHeader from "@/components/SecondHeader";
+
+
+import CTA from "@/components/(LandingPageComponents)/CTA"; 
+
+export default function About() {
+  const headerProps = {
+    heading: "Our",
+    coloredPart: "Services",
+    route: "Services",
+  };
+
+  return (
+    <main>
+      <SecondHeader {...headerProps} />
+        
+        <CTA />
+    </main>
+  );
 }
