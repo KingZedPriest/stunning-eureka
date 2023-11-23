@@ -4,7 +4,7 @@ import SecondHeader from "@/components/SecondHeader";
 
 import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
-export default function About() {
+export default function Contact() {
   const headerProps = {
     heading: "Contact",
     coloredPart: "Us",

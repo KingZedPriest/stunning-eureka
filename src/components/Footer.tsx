@@ -9,25 +9,25 @@ export default function Footer(){
             <div className="text-white flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between">
             <div className="flex flex-col">
                 <h4 className="font-bold text-orange">Quick Actions</h4>
-                <Link href="" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Tracking And Trace</Link>
-                <Link href="" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Same Day Delivery</Link>
-                <Link href="" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Request A Quote</Link>
-                <Link href="" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Support</Link>
-                <Link href="" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Legal</Link>
+                <Link href="/tracking" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Tracking And Trace</Link>
+                <Link href="/quote" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Same Day Delivery</Link>
+                <Link href="/quote" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Request A Quote</Link>
+                <Link href="/contact" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Support</Link>
+                <Link href="/legal" className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2">Legal</Link>
             </div>
             <div className="flex flex-col">
             <h4 className="font-bold text-orange">Company</h4>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">Privacy Statement</Link>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">Partner With Us</Link>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">Services</Link>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">Why Us?</Link>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">Career</Link>
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/privacy">Privacy Statement</Link>
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/contact">Partner With Us</Link>
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/services">Services</Link>
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/company">Why Us?</Link>
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/career">Career</Link>
             </div>
             <div className="flex flex-col">
             <h4 className="font-bold text-orange">Contact Us</h4>
             <p className="mt-2">General Inquiries: contactus@unitedtraverse.com</p>
             <p className="mt-2">Support: support@unitedtraverse.com</p>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/">FAQ</Link>         
+            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/faq">FAQ</Link>         
             </div>
             <div className="flex flex-col">
             <h4 className="font-bold text-orange">Newsletter</h4>

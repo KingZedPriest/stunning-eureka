@@ -53,7 +53,7 @@ export default function Header() {
               </Link>
             </div>
             <div className={`hidden md:block duration-500 transform hover:-translate-y-2`}>
-              <Link href="" className="bg-orange border-orange hover:text-orange border-2 px-4 py-3 text-white duration-500 hover:bg-white">
+              <Link href="/tracking" className="bg-orange border-orange hover:text-orange border-2 px-4 py-3 text-white duration-500 hover:bg-white">
                 Track Delivery
               </Link>
             </div>
@@ -114,7 +114,7 @@ export default function Header() {
                   >
                     Contact Us
                   </Link>
-                    <Link href="" className="mt-4 w-32 text-sm bg-orange border-orange hover:text-orange border-2 px-3 py-2 text-white duration-500 hover:bg-white">
+                    <Link href="/tracking" className="mt-4 w-32 text-sm bg-orange border-orange hover:text-orange border-2 px-3 py-2 text-white duration-500 hover:bg-white">
                       Track Delivery
                     </Link>
                 </div>
