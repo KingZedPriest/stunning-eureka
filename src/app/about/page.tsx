@@ -1,6 +1,6 @@
 //Import Header component
 import SecondHeader from "@/components/SecondHeader";
-
+import OurTeam from "@/components/(AboutUsComponents)/OurTeam";
 
 import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
@@ -14,8 +14,8 @@ export default function About() {
   return (
     <main>
       <SecondHeader {...headerProps} />
-        
-        <CTA />
+      <OurTeam />
+      <CTA />
     </main>
   );
 }
