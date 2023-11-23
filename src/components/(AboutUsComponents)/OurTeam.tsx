@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 //Import Needed Components
@@ -12,6 +14,12 @@ import courierDriver from "../../../public/images/logisticsManager.jpeg";
 //Import Links
 import { FaLinkedin } from "react-icons/fa";
 const OurTeam = () => {
+  //The States
+  const [open, setOpen] = useState<boolean>(false)
+  //The Toggle Function
+  const toggleOpen = () => {
+    setOpen((prevOpen => !prevOpen))
+  }
   return (
     <main className="px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="mt-10 flex flex-wrap justify-center gap-10">
@@ -91,7 +99,7 @@ const OurTeam = () => {
         </div>
         <div className="hover:scale-105 duration-500 flex flex-col items-center justify-center h-96 shrink-0 w-[16rem] group rounded-lg shadow-md">
            <h1 className="capitalize text-2xl font-semibold text-center text-blue"> <span className="text-orange">United Traverse&apos;s</span> brief history?</h1> 
-           <Link href="c" className="mt-10 px-4 py-2 bg-orange border text-white border-orange hover:bg-white hover:text-orange duration-500">Read Here</Link>
+           <Link href="" className="mt-10 px-4 py-2 bg-orange border text-white border-orange hover:bg-white hover:text-orange duration-500">Read Here</Link>
         </div>
       </div>
     </main>
