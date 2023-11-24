@@ -4,6 +4,7 @@ import Link from "next/link";
 //Import needed components
 import Heading from "../h1";
 import AirFreight from "./AirFreight";
+import OceanFreight from "./OceanFreight";
 //Import needed Icons
 import { FaHandPointRight } from "react-icons/fa";
 import { BsFacebook, BsTrainFreightFrontFill, BsFillPatchQuestionFill } from "react-icons/bs";
@@ -54,6 +55,7 @@ const ServiceOverview = () => {
     case 'ocean':
         icon = <LiaShipSolid className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
       content = <p className="text-xs md:text-sm">Ocean Freight</p>;
+      body = <OceanFreight />
       break;
     case 'road':
         icon = <FaTruckFront className="text-orange text-xl"/>
