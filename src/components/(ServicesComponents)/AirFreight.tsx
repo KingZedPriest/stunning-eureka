@@ -133,6 +133,7 @@ const AirFreight = () => {
             </div>
           </div>
         </div>
+        
         <div className="w-full sm:w-[49%]">
           <div className="flex gap-x-3">
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
