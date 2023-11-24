@@ -8,6 +8,7 @@ import OceanFreight from "./OceanFreight";
 import RoadFrieght from "./RoadFrieght";
 import RailFreight from "./RailFreight";
 import ImportExport from "./Import&Export";
+import Others from "./Others"
 //Import needed Icons
 import { FaHandPointRight } from "react-icons/fa";
 import { BsFacebook, BsTrainFreightFrontFill, BsFillPatchQuestionFill } from "react-icons/bs";
@@ -79,10 +80,12 @@ const ServiceOverview = () => {
     case 'other':
         icon = <BsFillPatchQuestionFill className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
       content = <p className="text-xs md:text-sm">Other Services.</p>;
+      body = <Others />
       break;
     default:
         icon = <GiCommercialAirplane className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
       content = <p className="text-xs md:text-sm">Air Freight</p>;
+      body = <AirFreight />
   }
   return (
     <main className="bg-bgWhite px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
