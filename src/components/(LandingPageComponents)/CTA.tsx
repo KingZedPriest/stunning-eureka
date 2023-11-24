@@ -22,7 +22,7 @@ const CTA = () => {
           let the most powerful logistics solution ever developed make decisions
           for you.
         </p>
-        <Link href="" className="transform hover:translate-x-2 hover:-translate-y-2 w-40 text-center py-2 md:py-3 bg-orange hover:bg-blue text-white duration-500 mt-5 md:mt-10 text-sm md:text-base">Get Free Quote</Link>
+        <Link href="/quote" className="transform hover:translate-x-2 hover:-translate-y-2 w-40 text-center py-2 md:py-3 bg-orange hover:bg-blue text-white duration-500 mt-5 md:mt-10 text-sm md:text-base">Get Free Quote</Link>
       </div>
     </main>
   );

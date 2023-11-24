@@ -2,7 +2,6 @@
 import SecondHeader from "@/components/SecondHeader";
 import OurTeam from "@/components/(AboutUsComponents)/OurTeam";
 import Consult from "@/components/(AboutUsComponents)/Consult";
-import BriefHistory from "@/components/(AboutUsComponents)/BriefHistory";
 import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
 export default function About() {
@@ -17,7 +16,7 @@ export default function About() {
       <SecondHeader {...headerProps} />
       <OurTeam />
       <Consult />
-      <BriefHistory />
+
       <CTA />
     </main>
   );
