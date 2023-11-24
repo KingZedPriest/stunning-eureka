@@ -1,32 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 //Import Images
-import ocean from "../../../public/images/ocean.jpeg";
-import ocean1 from "../../../public/images/ocean1.jpeg";
+import road from "../../../public/images/road.jpeg";
+import road1 from "../../../public/images/road1.jpeg";
 import logo from "../../../public/images/logo.png";
 //Import Icons
 import { MdGppGood } from "react-icons/md";
 
-const OceanFreight = () => {
+const RoadFrieght = () => {
   return (
     <main className="flex flex-col gap-y-5">
       <p className="mt-10 text-xs md:text-sm">
-        Dive into the expansive possibilities of global shipping with United
-        Traverse&apos;s Ocean Freight services. Navigating the vast oceans, our
-        comprehensive offerings ensure a reliable and efficient solution for a
-        spectrum of shipping requirements. Embarking on a journey of maritime
-        excellence, we present a range of services that cater to every need.{" "}
-        <br /> <br />
-        At United Traverse, we set sail with a commitment to excellence in Ocean
-        Freight services, ensuring that every shipment, regardless of size or
-        complexity, reaches its destination with precision, security, and
-        unparalleled reliability.
+        Embark on a journey of efficiency and reliability with United
+        Traverse&apos;s Road Freight services. Designed to traverse the diverse
+        landscapes of roadways, our comprehensive offerings ensure a seamless
+        and secure solution for land transportation. As the wheels of progress
+        turn, we present a range of services that cater to every road freight
+        need. <br />
+        <br />
+        At United Traverse, our commitment to excellence extends to the highways
+        and byways. With our Road Freight services, we guarantee that every
+        shipment is handled with precision, speed, and the unwavering
+        reliability of our trucking fleet.
       </p>
       <div className="mt-10 flex gap-x-5">
         <div className="relative w-1/2">
           <Image
-            src={ocean}
-            alt="Ocean Freight Img"
+            src={road}
+            alt="Road Freight Img"
             className="transform rounded-xl duration-500 hover:scale-105"
           />
           <div className="absolute bottom-0 left-0 w-6 md:w-10">
@@ -39,8 +40,8 @@ const OceanFreight = () => {
         </div>
         <div className="relative w-1/2">
           <Image
-            src={ocean1}
-            alt="Ocean Freight Img"
+            src={road1}
+            alt="Road Freight Img"
             className="transform rounded-xl duration-500 hover:scale-105"
           />
           <div className="absolute bottom-0 right-0 w-6 md:w-10">
@@ -58,12 +59,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Full Container Load (FCL)
+                Full Truck Load (FTL)
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                For sizable shipments, our Full Container Load service offers
-                dedicated containers, providing security and exclusivity for
-                your cargo.
+                Opt for exclusive use with our Full Truck Load service, where a
+                dedicated truck ensures the secure transportation of larger
+                shipments with efficiency.
               </p>
             </div>
           </div>
@@ -71,12 +72,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Less than Container Load (LCL):
+                Less than Truck Load (LTL)
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                Ideal for smaller shipments, our Less than Container Load
-                service combines multiple shipments in a single container,
-                ensuring cost-effective and efficient delivery.
+                For smaller shipments, our Less than Truck Load service combines
+                multiple shipments in a single truck, providing a cost-effective
+                solution without compromising on reliability.
               </p>
             </div>
           </div>
@@ -84,12 +85,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Ro-Ro (Roll-on/Roll-off):
+                Express Road Freight
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                Streamline the transportation of wheeled cargo with our Ro-Ro
-                service, allowing vehicles and heavy machinery to be rolled onto
-                and off the vessel with ease.
+                Swift and time-sensitive, our Express Road Freight service
+                ensures your shipments reach their destination with speed,
+                meeting tight delivery schedules.
               </p>
             </div>
           </div>
@@ -97,26 +98,25 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Breakbulk Shipping
-              </p>
-              <p className="mt-1 text-xs sm:text-sm">
-                Opt for flexibility with our Breakbulk Shipping service,
-                designed for goods that don&apos;t fit standard containers,
-                ensuring secure transport for unique cargo.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-x-3">
-            <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
-            <div className="mt-4">
-              <p className="text-base font-bold text-blue md:text-lg">
-                Temperature-Controlled Freight:
+                Temperature-Controlled Road Freight
               </p>
               <p className="mt-1 text-xs sm:text-sm">
                 Safeguard the integrity of temperature-sensitive cargo with our
-                Temperature-Controlled Ocean Freight, ensuring items such as
-                pharmaceuticals or perishables reach their destination in
-                optimal condition.
+                Temperature-Controlled Road Freight, offering climate-controlled
+                trucks for the transportation of perishable goods.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-x-3">
+            <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
+            <div className="mt-4">
+              <p className="text-base font-bold text-blue md:text-lg">
+                Door-to-Door Road Freight:
+              </p>
+              <p className="mt-1 text-xs sm:text-sm">
+                Enjoy end-to-end convenience with our Door-to-Door Road Freight
+                service, providing seamless solutions from your location to the
+                recipient&apos;s doorstep.
               </p>
             </div>
           </div>
@@ -126,12 +126,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Door-to-Door Ocean Freight
+                Flatbed Trucking
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                Enjoy a hassle-free shipping experience with our Door-to-Door
-                Ocean Freight service, providing end-to-end solutions from your
-                location to the final destination.
+                Ideal for oversized or unconventional cargo, our Flatbed
+                Trucking service accommodates shipments that require open and
+                flexible transportation.
               </p>
             </div>
           </div>
@@ -139,25 +139,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Project Cargo Handling
-              </p>
-              <p className="mt-1 text-xs sm:text-sm">
-                Navigate complex logistics with our Project Cargo Handling
-                service, tailored for large, specialized shipments requiring
-                meticulous planning and execution.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-x-3">
-            <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
-            <div className="mt-4">
-              <p className="text-base font-bold text-blue md:text-lg">
-                Hazmat Shipping
+                Hazmat Road Freight
               </p>
               <p className="mt-1 text-xs sm:text-sm">
                 Trust our expertise in handling hazardous materials with our
-                Hazmat Shipping service, ensuring compliance with international
-                regulations for the safe transport of dangerous goods.
+                Hazmat Road Freight service, ensuring compliance with safety
+                regulations for the secure transport of dangerous goods.
               </p>
             </div>
           </div>
@@ -165,12 +152,12 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Global Network Ocean Freight
+                Cross-Border Road Freight
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                Leverage our extensive global network for seamless international
-                shipments, connecting you to key ports worldwide with efficiency
-                and reliability.
+                Seamlessly navigate international borders with our Cross-Border
+                Road Freight service, facilitating efficient and timely
+                transportation across diverse regions.
               </p>
             </div>
           </div>
@@ -178,12 +165,25 @@ const OceanFreight = () => {
             <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
             <div className="mt-4">
               <p className="text-base font-bold text-blue md:text-lg">
-                Charter Ocean Freight
+                Intermodal Road Freight
               </p>
               <p className="mt-1 text-xs sm:text-sm">
-                Customize your shipping experience with our Charter Ocean
-                Freight, providing dedicated vessels for exclusive use and
-                maximum control over your cargo.
+                Optimize efficiency with our Intermodal Road Freight service,
+                combining road and rail transport for a well-coordinated and
+                cost-effective logistics solution.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-x-3">
+            <MdGppGood className="mt-4 shrink-0 text-xl text-orange md:text-2xl lg:text-3xl" />
+            <div className="mt-4">
+              <p className="text-base font-bold text-blue md:text-lg">
+                Last-Mile Delivery
+              </p>
+              <p className="mt-1 text-xs sm:text-sm">
+                Ensure the final leg of your shipment&apos;s journey is smooth with
+                our Last-Mile Delivery service, providing meticulous delivery to
+                the end recipient, including residential areas.
               </p>
             </div>
           </div>
@@ -201,4 +201,4 @@ const OceanFreight = () => {
   );
 };
 
-export default OceanFreight;
+export default RoadFrieght;

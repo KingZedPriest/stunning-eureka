@@ -5,6 +5,7 @@ import Link from "next/link";
 import Heading from "../h1";
 import AirFreight from "./AirFreight";
 import OceanFreight from "./OceanFreight";
+import RoadFrieght from "./RoadFrieght";
 //Import needed Icons
 import { FaHandPointRight } from "react-icons/fa";
 import { BsFacebook, BsTrainFreightFrontFill, BsFillPatchQuestionFill } from "react-icons/bs";
@@ -60,6 +61,7 @@ const ServiceOverview = () => {
     case 'road':
         icon = <FaTruckFront className="text-orange text-xl"/>
       content = <p className="text-xs md:text-sm">Road Freight.</p>;
+      body = <RoadFrieght />
       break;
     case 'rail':
         icon = <BsTrainFreightFrontFill className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
