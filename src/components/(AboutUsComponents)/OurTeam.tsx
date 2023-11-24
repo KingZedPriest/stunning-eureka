@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 //Import Needed Components
 import Heading from "@/components/h1";
+import OpenHistory from "./OpenHistory";
 //Import Images
 import CEO from "../../../public/images/ceo.jpeg";
 import operationsManager from "../../../public/images/aboutUs.jpeg";
@@ -21,6 +22,7 @@ const OurTeam = () => {
     setOpen((prevOpen => !prevOpen))
   }
   return (
+    <>{open && <OpenHistory />}
     <main className="px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="mt-10 flex flex-wrap justify-center gap-10">
         <div className="h-96 hover:scale-105 duration-500 shrink-0 w-[16rem] rounded-lg  p-4 shadow-md flex flex-col justify-center items-center">
@@ -99,10 +101,11 @@ const OurTeam = () => {
         </div>
         <div className="hover:scale-105 duration-500 flex flex-col items-center justify-center h-96 shrink-0 w-[16rem] group rounded-lg shadow-md">
            <h1 className="capitalize text-2xl font-semibold text-center text-blue"> <span className="text-orange">United Traverse&apos;s</span> brief history?</h1> 
-           <Link href="" className="mt-10 px-4 py-2 bg-orange border text-white border-orange hover:bg-white hover:text-orange duration-500">Read Here</Link>
+           <button onClick={toggleOpen} className="mt-10 px-4 py-2 bg-orange border text-white border-orange hover:bg-white hover:text-orange duration-500">Read Here</button>  
         </div>
       </div>
     </main>
+    </>
   );
 };
 

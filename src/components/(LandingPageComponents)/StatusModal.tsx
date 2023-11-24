@@ -12,7 +12,7 @@ export default function Modal({status}: {status: string}){
         return setClose((prevClose) => !prevClose)
     }
     return(
-        <main className={`${close ? "hidden" : ""} fixed h-screen w-full bg-black bg-opacity-50 flex items-center justify-center z-50 top-0 left-0`}>
+        <main className={`${close ? "hidden" : ""} fixed h-screen w-full bg-black bg-opacity-50 flex items-center justify-center z-[70] top-0 left-0`}>
             <div className="w-80 h-80 md:h-96 md:w-96 bg-bgWhite p-4">
                 <div className="flex flex-col items-end">
                     <RxCross1 size={24} className="cursor-pointer" onClick={closeToggle}/>
