@@ -7,6 +7,7 @@ import AirFreight from "./AirFreight";
 import OceanFreight from "./OceanFreight";
 import RoadFrieght from "./RoadFrieght";
 import RailFreight from "./RailFreight";
+import ImportExport from "./Import&Export";
 //Import needed Icons
 import { FaHandPointRight } from "react-icons/fa";
 import { BsFacebook, BsTrainFreightFrontFill, BsFillPatchQuestionFill } from "react-icons/bs";
@@ -18,6 +19,7 @@ import { GiCommercialAirplane } from "react-icons/gi";
 import { LiaShipSolid } from "react-icons/lia";
 import { FaTruckFront } from "react-icons/fa6";
 import { VscArrowSwap } from "react-icons/vsc";
+;
 
 const ServiceOverview = () => {
 
@@ -72,6 +74,7 @@ const ServiceOverview = () => {
     case 'import':
         icon = <VscArrowSwap className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
       content = <p className="text-xs md:text-sm">Import & Export.</p>;
+      body = <ImportExport />
       break;
     case 'other':
         icon = <BsFillPatchQuestionFill className="text-orange text-sm sm:text-base md:text-lg lg:text-xl"/>
