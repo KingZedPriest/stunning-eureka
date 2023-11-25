@@ -90,7 +90,7 @@ const ServiceOverview = () => {
   return (
     <main className="bg-bgWhite px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="flex flex-col gap-y-8 lg:flex-row lg:gap-x-8 lg:gap-y-0">
-        <div className="flex w-full flex-row gap-x-3 overflow-x-auto pb-4 sm:gap-x-5 md:gap-x-7 lg:w-[30%] lg:flex-col lg:justify-start lg:gap-x-0 lg:gap-y-3 xl:w-[25%]">
+        <div className="flex w-full flex-row gap-x-3 special overflow-x-auto pb-4 sm:gap-x-5 md:gap-x-7 lg:w-[30%] lg:flex-col lg:justify-start lg:gap-x-0 lg:gap-y-3 xl:w-[25%]">
           <div className="w-60 shrink-0 rounded-xl bg-blue px-4 py-8 lg:w-full xl:px-8">
             <h1 className="text-xl font-bold text-white lg:text-2xl">
               Recent Services

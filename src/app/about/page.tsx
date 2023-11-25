@@ -16,7 +16,6 @@ export default function About() {
       <SecondHeader {...headerProps} />
       <OurTeam />
       <Consult />
-
       <CTA />
     </main>
   );
