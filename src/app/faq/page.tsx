@@ -1,21 +1,21 @@
-//Import Header component
+//Import needed component
 import SecondHeader from "@/components/SecondHeader";
-
-
+import AskedQuestion from "@/components/(FaqsComponents)/AskedQuestion";
 import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
-export default function FAQ() {
-  const headerProps = {
+ const headerProps = {
     heading: "Our",
     coloredPart: "FAQs",
     route: "FAQs",
   };
 
+export default function FAQ() {
+
   return (
     <main>
       <SecondHeader {...headerProps} />
-        
-        <CTA />
+      <AskedQuestion />
+      <CTA />
     </main>
   );
 }
