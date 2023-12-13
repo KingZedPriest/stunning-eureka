@@ -1,11 +1,14 @@
+"use client"
+import { usePathname } from 'next/navigation'
 //Needed Images
 import logo from "../../public/images/logo.png";
 //Deafult Mechanism
 import Image from "next/image";
 import Link from "next/link";
 export default function Footer(){
+    const pathname = usePathname()
     return(
-        <main className="pt-[14rem] pb-[4rem] px-4 sm:px-10 md:px-12 lg:px-14 bg-footerBrown text-white text-xs sm:text-sm md:text-base">
+        <main className={`${pathname === "/who-are-you/register" || pathname === "/who-are-you/login" ? "hidden" : ""} pt-[14rem] pb-[4rem] px-4 sm:px-10 md:px-12 lg:px-14 bg-footerBrown text-white text-xs sm:text-sm md:text-base`}>
             <div className="text-white flex flex-col space-y-8 lg:space-y-0 lg:flex-row justify-between">
             <div className="flex flex-col">
                 <h4 className="font-bold text-orange">Quick Actions</h4>

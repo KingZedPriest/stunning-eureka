@@ -45,7 +45,7 @@ const AskedQuestion = () => {
                 provided to you. Simply enter the number on our website&apos;s{" "}
                 <Link
                   href="/tracking"
-                  className="cursor-pointer text-blue duration-500 hover:underline"
+                  className="cursor-pointer underline"
                 >
                   Tracking Tool
                 </Link>{" "}
@@ -71,12 +71,12 @@ const AskedQuestion = () => {
                 support team through the{" "}
                 <Link
                   href="/contact"
-                  className="cursor-pointer text-blue duration-500 hover:underline"
+                  className="cursor-pointer underline"
                 >
                   Contact Us{" "}
                 </Link>{" "}
                 page on our website or via email at{" "}
-                <span className="text-blue">support@unitedtraverse.com</span>.
+                <span className="underline">support@unitedtraverse.com</span>.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
@@ -96,7 +96,7 @@ const AskedQuestion = () => {
               <AccordionContent>
                 If you&apos;re interested in partnership or affiliation
                 opportunities, please contact our business development team at 
-                  {" "}<span className="text-blue">
+                  {" "}<span className="underline">
                   partnerships@unitedtraverse.com
                 </span>
                 .
@@ -142,7 +142,7 @@ const AskedQuestion = () => {
               </AccordionTrigger>
               <AccordionContent>
                 Absolutely! You can easily request a quote by filling out the
-                online form on our <Link href="/quote" className="cursor-pointer text-blue duration-500 hover:underline">Get a Quote</Link> page. Our team will promptly
+                online form on our <Link href="/quote" className="cursor-pointer underline">Get a Quote</Link> page. Our team will promptly
                 provide you with a customized quote based on your shipping
                 needs.
               </AccordionContent>
