@@ -27,14 +27,14 @@ const OfficeLocation = () => {
             </p>
             <div className="special mt-10 flex gap-x-5 overflow-x-auto pb-4 md:gap-x-10">
               <div className="h-80 w-72 min-w-[15rem] rounded-md bg-blue p-8">
-                <p className="text-base font-bold text-orange sm:text-lg md:text-xl lg:text-2xl">
+                <p className="text-base font-bold text-orange1 sm:text-lg md:text-xl lg:text-2xl">
                   United States
                 </p>
                 <p className="text-bold mt-2 text-white md:text-lg">
                   Head Office
                 </p>
                 <div className="mt-6 flex items-center gap-x-3 text-white">
-                  <BiSolidHomeHeart size={32} className="text-orange shrink-0" />
+                  <BiSolidHomeHeart size={32} className="text-orange1 shrink-0" />
                   <div>
                     <p className="text-lg font-bold md:text-xl">Address</p>
                     <p className="text-xs md:text-sm mt-1">
@@ -44,7 +44,7 @@ const OfficeLocation = () => {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-x-3 text-white">
-                  <MdEmail size={32} className="text-orange shrink-0" />
+                  <MdEmail size={32} className="text-orange1 shrink-0" />
                   <div>
                     <p className="text-lg font-bold md:text-xl">Email</p>
                     <p className="text-xs md:text-sm mt-1">
@@ -54,14 +54,14 @@ const OfficeLocation = () => {
                 </div>
               </div>
               <div className="h-80 w-72 min-w-[15rem] rounded-md bg-blue p-8">
-                <p className="text-base font-bold text-orange sm:text-lg md:text-xl lg:text-2xl">
+                <p className="text-base font-bold text-orange1 sm:text-lg md:text-xl lg:text-2xl">
                   Iraq
                 </p>
                 <p className="text-bold mt-2 text-white md:text-lg">
                   Branch Office
                 </p>
                 <div className="mt-6 flex items-center gap-x-3 text-white">
-                  <BiSolidHomeHeart size={32} className="text-orange shrink-0" />
+                  <BiSolidHomeHeart size={32} className="text-orange1 shrink-0" />
                   <div>
                     <p className="text-lg font-bold md:text-xl">Address</p>
                     <p className="text-xs md:text-sm mt-1">
@@ -70,7 +70,7 @@ const OfficeLocation = () => {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-x-3 text-white">
-                  <MdEmail size={32} className="text-orange shrink-0" />
+                  <MdEmail size={32} className="text-orange1 shrink-0" />
                   <div>
                     <p className="text-lg font-bold md:text-xl">Email</p>
                     <p className="text-xs md:text-sm mt-1">
