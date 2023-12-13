@@ -8,14 +8,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Heading from "../h1";
 //Import Needed Images
 import faqImg from "../../../public/images/faq.jpeg";
+
 
 const AskedQuestion = () => {
   return (
     <main className="bg-bgWhite px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
-      <div className="flex flex-col-reverse gap-y-5 lg:flex-row lg:justify-between lg:gap-y-0">
+      <div className="flex flex-col-reverse gap-y-5 lg:flex-row lg:justify-between lg:gap-y-0 lg:items-center">
         <div className="w-full lg:w-[49%]">
+          <div className="mb-10">
+            <p className="mb-4 text-sm text-orange sm:text-base md:text-lg lg:text-xl">
+              CLIENTS INQUIRIES
+            </p>
+            <Heading heading="Frequently Asked" coloredHeading="Questions" />
+          </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger>

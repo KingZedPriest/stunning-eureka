@@ -7,7 +7,7 @@ import { GrChatOption } from "react-icons/gr";
 import { MdSupportAgent } from "react-icons/md";
 const WhyChooseUs = () => {
   return (
-    <main className="bg-bgWhite px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14 ">
+    <main className="bg-bgWhite px-4 pt-[8rem] sm:px-10 md:px-12 lg:px-14 ">
       <div className="flex flex-col items-center gap-y-10 lg:flex-row lg:items-end lg:justify-between lg:gap-y-0 xl:items-center">
         <div className="relative w-full lg:w-[49%]">
             <Image src={aboutUs} alt="United Traverse Warehouse Img" className="rounded-xl"/>

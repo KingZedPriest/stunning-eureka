@@ -25,7 +25,7 @@ const OurTeam = () => {
     <>{open && <OpenHistory />}
     <main className="px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="mt-10 flex flex-wrap justify-center gap-10">
-        <div className="h-96 hover:scale-105 duration-500 shrink-0 w-[16rem] rounded-lg  p-4 shadow-md flex flex-col justify-center items-center">
+        <div className="border border-blue h-96 hover:scale-105 duration-500 shrink-0 w-[16rem] rounded-lg  p-4 shadow-md flex flex-col justify-center items-center">
           <p className="mb-4 text-sm text-orange sm:text-base md:text-lg lg:text-xl">
             United Traverse Team
           </p>
@@ -99,7 +99,7 @@ const OurTeam = () => {
                 <p className="text-orange text-right text-sm group-hover:text-white duration-500 font-semibold">Courier Driver (IRAQ)</p>
             </div>
         </div>
-        <div className="hover:scale-105 duration-500 flex flex-col items-center justify-center h-96 shrink-0 w-[16rem] group rounded-lg shadow-md">
+        <div className="hover:scale-105 duration-500 flex flex-col items-center justify-center h-96 shrink-0 w-[16rem] group rounded-lg shadow-md border border-blue">
            <h1 className="capitalize text-2xl font-semibold text-center text-blue"> <span className="text-orange">United Traverse&apos;s</span> brief history?</h1> 
            <button onClick={toggleOpen} className="mt-10 px-4 py-2 bg-orange border text-white border-orange hover:bg-white hover:text-orange duration-500">Read Here</button>  
         </div>

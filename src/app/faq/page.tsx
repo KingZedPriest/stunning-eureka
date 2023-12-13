@@ -1,6 +1,8 @@
 //Import needed component
 import SecondHeader from "@/components/SecondHeader";
 import AskedQuestion from "@/components/(FaqsComponents)/AskedQuestion";
+import Summary from "@/components/(ServicesComponents)/Summary";
+import OfficeLocation from "@/components/(FaqsComponents)/OfficeLocation";
 import CTA from "@/components/(LandingPageComponents)/CTA"; 
 
  const headerProps = {
@@ -15,6 +17,8 @@ export default function FAQ() {
     <main>
       <SecondHeader {...headerProps} />
       <AskedQuestion />
+      <Summary />
+      <OfficeLocation />
       <CTA />
     </main>
   );

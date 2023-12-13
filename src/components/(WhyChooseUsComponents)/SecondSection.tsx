@@ -33,7 +33,7 @@ const SecondSection = () => {
   }, []);
 
   return (
-    <main className="px-4 pb-[8rem] sm:px-10 md:px-12 lg:px-14">
+    <main className="px-4 lg:py-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 text-white">
       {Array.from({ length: 4 }).map((_, index) => (
         <div key={index} className={`flex h-60 w-80 flex-col gap-y-3 items-center justify-center bg-${index === currentDiv ? 'orange' : 'blue'} px-4 group hover:bg-orange duration-500`}>
