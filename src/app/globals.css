@@ -89,11 +89,11 @@ body::-webkit-scrollbar-track {
 }
 
 .special::-webkit-scrollbar-thumb {
-  background-color: #013a94;
+  background-color: #e8724a;
   border-radius: 2px;
 }
 .special::-webkit-scrollbar-thumb:hover {
-  background-color: #4a8ae8;
+  background-color: #922f0e;
 }
 
 .special::-webkit-scrollbar-track {
