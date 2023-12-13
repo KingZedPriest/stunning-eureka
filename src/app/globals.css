@@ -99,3 +99,14 @@ body::-webkit-scrollbar-track {
 .special::-webkit-scrollbar-track {
   background: #231f20;
 }
+
+/* For the Sidebar layout */
+.mainWidth {
+  width: calc(100% - 300px);
+  float: right;
+}
+@media screen and (max-width: 767px) {
+  .mainWidth {
+    width: 100%;
+  }
+}

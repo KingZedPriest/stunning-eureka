@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { roboto } from "./fonts";
-import './globals.css';
+import { roboto } from "../fonts";
+import '../globals.css';
 import { Toaster } from 'sonner';
 
 // Import Components
