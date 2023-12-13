@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { LuMenuSquare } from "react-icons/lu";
+//Import Icons
+import { GoHomeFill } from "react-icons/go";
+import { FaTruck } from "react-icons/fa";
+import { MdReceiptLong } from "react-icons/md";
 
 const Sidebar = () => {
     //For the sidebar
@@ -14,28 +18,28 @@ const Sidebar = () => {
   };
     return ( 
         <main>
-            <div className="hidden lg:block fixed left-0 top-0 z-50 h-screen w-80 bg-bgWhite p-10 shadow-md">
-            <div className={`flex flex-col gap-y-5 font-semibold`}>
+            <div className="hidden lg:block fixed left-0 top-0 z-50 h-screen w-80 bg-black p-10">
+            <div className={`flex flex-col gap-y-5 font-semibold mt-20`}>
                 <Link
                     href="/admin/dashboard"
                     prefetch
-                    className={`duration-500 hover:underline text-sm md:text-base hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm md:text-base hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Dasboard
+                    <GoHomeFill size={24}/> Dasboard
                   </Link>
                 <Link
                     href="/admin/orders"
                     prefetch
-                    className={`duration-500 hover:underline text-sm md:text-base hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm md:text-base hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Orders
+                    <MdReceiptLong size={24}/> Orders
                   </Link>
                   <Link
                     href="/admin/tracking"
                     prefetch
-                    className={`duration-500 hover:underline text-sm md:text-base hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm md:text-base hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Tracking
+                    <FaTruck size={24}/> Tracking
                   </Link>
                 </div>
             </div>
@@ -51,34 +55,34 @@ const Sidebar = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "-100%", opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="lg:hidden fixed left-0 top-0 z-50 h-screen w-80 bg-bgWhite p-10 shadow-md"
+                className="lg:hidden fixed left-0 top-0 z-50 h-screen w-80 bg-black p-10"
               >
                     <AiOutlineCloseSquare
                       onClick={toggleOpen}
                       size={40}
                       className="cursor-pointer text-orange mb-10"
                     />
-                <div className={`flex flex-col gap-y-5 font-semibold`}>
+                <div className={`flex flex-col gap-y-5 font-semibold mt-20`}>
                 <Link
                     href="/admin/dashboard"
                     prefetch
-                    className={`duration-500 hover:underline text-sm hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Dasboard
+                    <GoHomeFill size={24}/> Dasboard
                   </Link>
                 <Link
                     href="/admin/orders"
                     prefetch
-                    className={`duration-500 hover:underline text-sm hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Orders
+                    <MdReceiptLong size={24}/> Orders
                   </Link>
                   <Link
                     href="/admin/tracking"
                     prefetch
-                    className={`duration-500 hover:underline text-sm hover:translate-x-2 bg-orange p-4 rounded-md hover:-translate-y-2 hover:text-white active:text-white focus:text-white focus:-translate-y-2 focus:translate-x-2`}
+                    className={`flex gap-x-3 items-center duration-500 hover:underline text-sm hover:translate-x-2 p-4 rounded-md hover:-translate-y-2 text-white hover:text-orange active:text-orange focus:text-orange focus:-translate-y-2 focus:translate-x-2`}
                   >
-                    Tracking
+                    <FaTruck size={24}/> Tracking
                   </Link>
                 </div>
               </motion.div>
