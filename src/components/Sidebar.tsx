@@ -13,6 +13,7 @@ import { RiAdminFill } from "react-icons/ri";
 import { LuLogOut } from "react-icons/lu";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { LuMenuSquare } from "react-icons/lu";
+import { IoMdContact } from "react-icons/io";
 
 const Sidebar = () => {
     const pathName = usePathname()
@@ -49,6 +50,13 @@ const Sidebar = () => {
             className={`${pathName === "/admin/tracking" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <FaTruck size={24} /> Tracking
+          </Link>
+          <Link
+            href="/admin/contact"
+            prefetch
+            className={`${pathName === "/admin/contact" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+          >
+            <IoMdContact size={24} /> Contact
           </Link>
         </div>
         <Link
@@ -103,6 +111,13 @@ const Sidebar = () => {
               >
                 <FaTruck size={24} /> Tracking
               </Link>
+              <Link
+            href="/admin/contact"
+            prefetch
+            className={`${pathName === "/admin/contact" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+          >
+            <IoMdContact size={24} /> Contact
+          </Link>
             </div>
             <Link
               href=""
