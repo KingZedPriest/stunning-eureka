@@ -45,7 +45,7 @@ export default function Footer(){
             <div className="flex flex-row items-center">
                 <div className="border-r border-white pr-4">
                     <div className="p-4 bg-orange">
-                        <Image src={logo} alt="United Traverse Logo" className="w-20 md:w-10"/>  
+                        <Image src={logo} alt="United Traverse Logo" className="w-20 md:w-10" placeholder="blur"/>  
                     </div>
                 </div>
                <div className="ml-4">

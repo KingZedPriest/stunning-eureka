@@ -10,6 +10,7 @@ const CTA = () => {
           src={ctaImg}
           alt="CTA Image"
           className="h-full w-full object-cover"
+          placeholder="blur"
         />
       </div>
       <div className="w-full flex flex-col items-start justify-center p-2 sm:p-4 md:w-1/2 md:p-6 lg:p-8">

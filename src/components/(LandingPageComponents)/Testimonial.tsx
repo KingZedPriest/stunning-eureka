@@ -62,7 +62,7 @@ export default function Testimonials() {
               <div className="group h-full w-full bg-bgWhite p-8 duration-500 hover:bg-blue sm:p-10 md:w-[49%] md:p-8 lg:w-[40%] lg:p-6 xl:p-8">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-x-5">
-                    <Image src={slide.imgSrc} alt="client image" className="w-14 h-14 lg:h-20 lg:w-20" />
+                    <Image src={slide.imgSrc} alt="client image" className="w-14 h-14 lg:h-20 lg:w-20" placeholder="blur"/>
                     <div className="group-hover:text-white">
                       <h4 className="text-base font-semibold md:text-lg">
                         {slide.name}
@@ -95,7 +95,7 @@ export default function Testimonials() {
               <>
               <div className="flex items-center justify-between">
                   <div className="flex items-center gap-x-5">
-                    <Image src={slides[index + 1].imgSrc} alt="client image" className="w-14 h-14 lg:h-20 lg:w-20" />
+                    <Image src={slides[index + 1].imgSrc} alt="client image" className="w-14 h-14 lg:h-20 lg:w-20" placeholder="blur"/>
                     <div className="group-hover:text-white">
                       <h4 className="text-base font-semibold md:text-lg">
                         {slides[index + 1].name}

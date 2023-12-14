@@ -65,14 +65,14 @@ const FirstSection = () => {
                 just a shipping company; it&apos;s a promise of reliability, speed,
                 and excellence in every operation. <span className="text-orange font-bold text-sm md:text-base">&apos;&apos;</span>
               </p>
-              <Image src={signature} className="w-[70%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[30%] my-4" alt="Operations Manager Signature"/>
+              <Image src={signature} className="w-[70%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[30%] my-4" alt="Operations Manager Signature" placeholder="blur"/>
               <p className="mt-2 text-sm md:text-base font-bold">Elijah Mitchell.</p>
               <p className="mt-1 text-xs md:text-sm text-orange">Operations Manager</p>
             </div>
           </div>
         </div>
         <div className="w-full lg:w-[49%] relative text-white">
-            <Image src={aboutUs} alt="Elijah Mitchell Image" className="rounded-xl"/>
+            <Image src={aboutUs} alt="Elijah Mitchell Image" className="rounded-xl" placeholder="blur"/>
             <div className="rounded-lg shadow-md absolute -right-4 sm:-right-8 top-4 p-2 sm:p-4 md:px-8 md:py-4 lg:p-4  lg:px-8 lg:py-4 bg-orange flex flex-col items-center justify-center">
                 <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-[620]">250K<sup>+</sup></h1>
                 <p className="text-xs md:text-sm font-semibold">Client Export & Import</p>

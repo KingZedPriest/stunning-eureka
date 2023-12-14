@@ -150,7 +150,7 @@ const AskedQuestion = () => {
           </Accordion>
         </div>
         <div className="w-full lg:w-[45%]">
-          <Image src={faqImg} alt="Container Images" className="rounded-md" />
+          <Image src={faqImg} alt="Container Images" className="rounded-md" placeholder="blur"/>
         </div>
       </div>
     </main>

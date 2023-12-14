@@ -16,7 +16,6 @@ import { LuMenuSquare } from "react-icons/lu";
 
 const Sidebar = () => {
     const pathName = usePathname()
-    console.log(pathName)
   //For the sidebar
   const [isOpen, setIsOpen] = useState<boolean>(false);
   //Function to toggle the sidebar

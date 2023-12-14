@@ -40,12 +40,14 @@ const AirFreight = () => {
             src={air}
             alt="Air Freight Img"
             className="transform rounded-xl duration-500 hover:scale-105"
+            placeholder="blur"
           />
           <div className="absolute bottom-0 left-0 w-6 md:w-10">
             <Image
               src={logo}
               alt="United Traverse Logo"
               className="rounded-md"
+              placeholder="blur"
             />
           </div>
         </div>
@@ -54,12 +56,14 @@ const AirFreight = () => {
             src={air1}
             alt="Air Freight Img"
             className="transform rounded-xl duration-500 hover:scale-105"
+            placeholder="blur"
           />
           <div className="absolute bottom-0 right-0 w-6 md:w-10">
             <Image
               src={logo}
               alt="United Traverse Logo"
               className="rounded-md"
+              placeholder="blur"
             />
           </div>
         </div>

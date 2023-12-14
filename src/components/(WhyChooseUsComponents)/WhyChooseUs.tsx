@@ -10,9 +10,9 @@ const WhyChooseUs = () => {
     <main className="bg-bgWhite px-4 pt-[8rem] sm:px-10 md:px-12 lg:px-14 ">
       <div className="flex flex-col items-center gap-y-10 lg:flex-row lg:items-end lg:justify-between lg:gap-y-0 xl:items-center">
         <div className="relative w-full lg:w-[49%]">
-            <Image src={aboutUs} alt="United Traverse Warehouse Img" className="rounded-xl"/>
+            <Image src={aboutUs} alt="United Traverse Warehouse Img" className="rounded-xl" placeholder="blur"/>
             <div className="bg-orange rounded-lg shadow-sm w-10 absolute bottom-0 left-0">
-            <Image src={logo} alt="United Traverse Logo"/>
+            <Image src={logo} alt="United Traverse Logo" placeholder="blur"/>
             </div>
         </div>
         <div className="w-full lg:w-[49%]">

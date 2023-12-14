@@ -11,7 +11,7 @@ const OfficeLocation = () => {
     <main className="px-4 pt-[8rem] sm:px-10 md:px-12 lg:px-14">
       <div className="flex flex-col-reverse gap-y-5 lg:flex-row lg:items-center lg:justify-between lg:gap-y-0">
         <div className="w-full lg:w-[45%]">
-          <Image src={faqImg} alt="Office Image" className="rounded-lg" />
+          <Image src={faqImg} alt="Office Image" className="rounded-lg" placeholder="blur"/>
         </div>
         <div className="flex w-full flex-col gap-y-5 md:gap-y-10 lg:w-[50%]">
           <div>
