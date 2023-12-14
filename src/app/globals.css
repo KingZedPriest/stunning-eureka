@@ -102,10 +102,10 @@ body::-webkit-scrollbar-track {
 
 /* For the Sidebar layout */
 .mainWidth {
-  width: calc(100% - 300px);
+  width: calc(100% - 20rem);
   float: right;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .mainWidth {
     width: 100%;
   }

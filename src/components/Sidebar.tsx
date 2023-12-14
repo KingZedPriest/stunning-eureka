@@ -1,7 +1,9 @@
 "use client";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+
 
 //Import Icons
 import { GoHomeFill } from "react-icons/go";
@@ -13,6 +15,8 @@ import { AiOutlineCloseSquare } from "react-icons/ai";
 import { LuMenuSquare } from "react-icons/lu";
 
 const Sidebar = () => {
+    const pathName = usePathname()
+    console.log(pathName)
   //For the sidebar
   const [isOpen, setIsOpen] = useState<boolean>(false);
   //Function to toggle the sidebar
@@ -29,35 +33,35 @@ const Sidebar = () => {
           <Link
             href="/admin/dashboard"
             prefetch
-            className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+            className={`${pathName === "/admin/dashboard" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <GoHomeFill size={24} /> Dasboard
           </Link>
           <Link
             href="/admin/orders"
             prefetch
-            className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+            className={`${pathName === "/admin/orders" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <MdReceiptLong size={24} /> Orders
           </Link>
           <Link
             href="/admin/tracking"
             prefetch
-            className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+            className={`${pathName === "/admin/tracking" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <FaTruck size={24} /> Tracking
           </Link>
         </div>
         <Link
-          href="/admin/tracking"
+          href=""
           prefetch
-          className={`absolute bottom-8 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
+          className={`absolute bottom-20 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
         >
           <LuLogOut size={24} /> Logout
         </Link>
       </div>
       <LuMenuSquare
-        className="relative left-4 top-4 mt-2 cursor-pointer text-orange focus:text-blue md:hidden"
+        className="relative left-4 top-4 mt-2 cursor-pointer text-orange focus:text-blue lg:hidden"
         size={40}
         onClick={toggleOpen}
       />
@@ -82,29 +86,29 @@ const Sidebar = () => {
               <Link
                 href="/admin/dashboard"
                 prefetch
-                className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
+                className={`${pathName === "/admin/dashboard" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
               >
                 <GoHomeFill size={24} /> Dasboard
               </Link>
               <Link
                 href="/admin/orders"
                 prefetch
-                className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
+                className={`${pathName === "/admin/orders" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
               >
                 <MdReceiptLong size={24} /> Orders
               </Link>
               <Link
                 href="/admin/tracking"
                 prefetch
-                className={`flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
+                className={`${pathName === "/admin/tracking" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
               >
                 <FaTruck size={24} /> Tracking
               </Link>
             </div>
             <Link
-              href="/admin/tracking"
+              href=""
               prefetch
-              className={`absolute bottom-8 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
+              className={`absolute bottom-20 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
             >
               <LuLogOut size={24} /> Logout
             </Link>
