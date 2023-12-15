@@ -16,6 +16,10 @@ const OrderDetails = ({onClose}: OrderDetailsProps) => {
             <div className="flex justify-end">
                 <RxCross1 size={24} className="cursor-pointer" onClick={closeToggle} />
             </div>
+            <p className="text-xs sm:text-sm md:text-base font-bold mt-4">Package Details</p>
+            <div className="flex flex-col gap-y-3">
+
+            </div>
         </div>
     </main>
 )

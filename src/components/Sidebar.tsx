@@ -45,13 +45,6 @@ const Sidebar = () => {
             <MdReceiptLong size={24} /> Orders
           </Link>
           <Link
-            href="/admin/tracking"
-            prefetch
-            className={`${pathName === "/admin/tracking" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
-          >
-            <FaTruck size={24} /> Tracking
-          </Link>
-          <Link
             href="/admin/contact"
             prefetch
             className={`${pathName === "/admin/contact" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
@@ -103,13 +96,6 @@ const Sidebar = () => {
                 className={`${pathName === "/admin/orders" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
               >
                 <MdReceiptLong size={24} /> Orders
-              </Link>
-              <Link
-                href="/admin/tracking"
-                prefetch
-                className={`${pathName === "/admin/tracking" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
-              >
-                <FaTruck size={24} /> Tracking
               </Link>
               <Link
             href="/admin/contact"
