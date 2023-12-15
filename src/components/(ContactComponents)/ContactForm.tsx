@@ -41,7 +41,7 @@ const ContactForm = () => {
         <div className="w-full lg:w-[50%]">
             <form>
                 <div className="flex gap-x-5">
-                    <input type="text" name="name" id="name" placeholder="Enter Your First Name" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
                     <input type="email" name="email" id="email" placeholder="Enter Your Email Address" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
                 </div>
                 <input type="text" name="subject" id="subject" placeholder="Enter Your Subject Here" className="bg-white w-full mt-6 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>

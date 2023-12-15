@@ -8,7 +8,7 @@ import OrderDetails from "./OrderDetails";
 
 const OrderSummary = () => {
     //Set States
-    const [show, setShow] = useState<boolean>(true)
+    const [show, setShow] = useState<boolean>(false)
     const [create, setCreate] = useState<boolean>(false)
     const [packageId, setPackageId] = useState<string>("")
     // Function
@@ -28,13 +28,14 @@ const OrderSummary = () => {
                 <button onClick={toggleCreate} className="p-3 bg-orange text-white rounded-md font-semibold hover:bg-orange1 duration-500">Create New Order</button>
             </div>
             <div className="mt-10 w-full min-w-[40rem]">
-               <div onClick={toggleShow} className="flex justify-between items-center mt-4 border-b border-gray-400 py-2 cursor-pointer">
+                <p className="text-center text-xl font-bold">No Shipment Order Yet</p>
+               {/* <div onClick={toggleShow} className="flex justify-between items-center mt-4 border-b border-gray-400 py-2 cursor-pointer">
                     <PiPackageFill className="text-orange" size={30}/>
                     <p className="text-lg lg:text-xl font-bold">UT-786901</p>
                     <p className="text-lg lg:text-xl font-bold">Newyork</p>
                     <p className="text-lg lg:text-xl font-bold">10, Aug 2023</p>
                     <p className="text-sm lg:text-base">Completed</p>
-                </div>       
+                </div>        */}
             </div>
         </main>
         </>
