@@ -27,7 +27,7 @@ const OrderCreation = ({onClose}: OrderDetailsProps) => {
             <div className="flex justify-end">
                 <RxCross1 size={24} className="cursor-pointer" onClick={closeToggle} />
             </div>
-            <p className="text-xs sm:text-sm md:text-base font-bold mt-4">Fill In The Details of The New Package</p>
+            <p className="text-xs sm:text-sm md:text-base font-bold mt-4 text-center">Fill In The Details of The New Package</p>
             <form className="mt-4">
                 <div className="flex gap-x-3 md:gap-x-5 items-end">
                     <div className="w-[70%]">
