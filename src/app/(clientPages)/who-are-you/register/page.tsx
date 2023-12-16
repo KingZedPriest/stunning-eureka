@@ -2,7 +2,7 @@
 import { useState, useRef, FormEvent } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-// import { makeApiRequest } from "@/lib/apiUtils";
+import { makeApiRequest } from "@/lib/apiUtils";
 
 //Import Icons
 import { FaRegAddressCard } from "react-icons/fa";
@@ -11,7 +11,8 @@ import { BsEmojiHeartEyesFill } from "react-icons/bs";
 import { FaMehRollingEyes } from "react-icons/fa";
 import { GoPasskeyFill } from "react-icons/go";
 
-interface InitialStateProps {
+
+type InitialStateProps = {
   name : string,
   email: string,
   passPhrase: string,
@@ -38,24 +39,33 @@ export default function Register() {
   const handleChange = (event: any) => {
       setState({...state, [event.target.name]: event.target.value})
   }
+  //Function for the Form Reset
+  const handleFormReset = () => {
+    setState(initialState);
+  };
   //For the Function Submit
-  //const onSubmit = (event: FormEvent) => {
-  //event.preventDefault();
-
+  const onSubmit = (event: FormEvent) => {
+  event.preventDefault();
+  
   const formData = state;
 
-    // Example usage
-    //makeApiRequest('/register', 'post', formData, {
-    //onSuccess: () => {
+  if (process.env.ACCOUNT_CREATION_PASSPHRASE === state.passPhrase) {
+    toast.error("The Passphrase you entered is not correct.")
+    return
+  }
+    makeApiRequest('/register', 'post', formData, {
+
+    onSuccess: () => {
       // Handle success
-      // toast.success("Account was created successfully.");
-    // },
-    //onError: (error) => {
+      handleFormReset();
+      toast.success("Account was created successfully.");
+    },
+    onError: () => {
       // Handle error
-      // toast.error("Account was not created try again later.");
-    //},
- // });
-//};
+       toast.error("Account was not created try again later.");
+    },
+  });
+};
 
   return (
     <main className="pb-[8rem] flex items-center justify-center h-screen overflow-hidden">
@@ -72,13 +82,14 @@ export default function Register() {
             <Link href="/who-are-you/login">Log In</Link>
           </span>
         </p>
-          <form className="mt-10 w-full">
+          <form className="mt-10 w-full" onSubmit={onSubmit}>
               <div className="relative mt-4 w-[20rem] md:w-[30rem]">
                 <input
                   className="text-sm focus:border-2 focus:border-orange w-full bg-bgWhite border border-slate-700 px-2 py-3 outline-none rounded-md placeholder:text-xs"
                   type="text"
                   name="name"
                   id="name"
+                  value={state.name}
                   placeholder="Your Name"
                   onChange={handleChange}
                 />
@@ -93,6 +104,7 @@ export default function Register() {
                 type="email"
                 name="email"
                 id="email"
+                value={state.email}
                 placeholder="Email"
                 onChange={handleChange}
               />
@@ -104,6 +116,7 @@ export default function Register() {
                   type="text"
                   name="passPhrase"
                   id="passPhrase"
+                  value={state.passPhrase}
                   placeholder="Enter The Passphrase"
                   onChange={handleChange}
                 />
@@ -119,6 +132,7 @@ export default function Register() {
                 type={inputType}
                 name="password"
                 id="password"
+                value={state.password}
                 placeholder="Password"
                 onChange={handleChange}
               />

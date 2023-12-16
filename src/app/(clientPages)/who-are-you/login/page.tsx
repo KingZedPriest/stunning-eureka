@@ -2,14 +2,14 @@
 import { useState, useRef, FormEvent } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-// import { makeApiRequest } from "@/lib/apiUtils";
+import { makeApiRequest } from "@/lib/apiUtils";
 
 //Import Icons
 import { MdEmail } from "react-icons/md";
 import { BsEmojiHeartEyesFill } from "react-icons/bs";
 import { FaMehRollingEyes } from "react-icons/fa";
 
-interface InitialStateProps {
+type InitialStateProps = {
   email: string,
   password: string,
 }
@@ -32,24 +32,28 @@ export default function Login() {
   const handleChange = (event: any) => {
       setState({...state, [event.target.name]: event.target.value})
   }
-  //For the Function Submit
-  //const onSubmit = (event: FormEvent) => {
-  //event.preventDefault();
+  //Function for the Form Reset
+  const handleFormReset = () => {
+    setState(initialState);
+  };
+  //For the Submit Function
+  const onSubmit = (event: FormEvent) => {
+  event.preventDefault();
 
   const formData = state;
 
-    // Example usage
-    //makeApiRequest('/register', 'post', formData, {
-    //onSuccess: () => {
+    makeApiRequest('/login', 'post', formData, {
+    onSuccess: () => {
       // Handle success
-      // toast.success("Account was created successfully.");
-    // },
-    //onError: (error) => {
+      handleFormReset();
+      toast.success("Account was created successfully.");
+    },
+    onError: () => {
       // Handle error
-      // toast.error("Account was not created try again later.");
-    //},
- // });
-//};
+      toast.error("Account was not created try again later.");
+    },
+ });
+};
 
   return (
     <main className="h-screen flex items-center justify-center overflow-hidden">
