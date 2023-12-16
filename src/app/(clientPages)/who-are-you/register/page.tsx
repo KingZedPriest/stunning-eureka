@@ -4,6 +4,7 @@ import Link from "next/link";
 import { toast } from "sonner";
 import { makeApiRequest } from "@/lib/apiUtils";
 
+
 //Import Icons
 import { FaRegAddressCard } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -15,16 +16,16 @@ import { GoPasskeyFill } from "react-icons/go";
 type InitialStateProps = {
   name : string,
   email: string,
-  passPhrase: string,
   password: string,
 }
 const initialState:InitialStateProps = {
   name: "",
   email: "",
-  passPhrase: "",
   password: ""
 }
 export default function Register() {
+  //State For The PassPhrase
+  const [passPhrase, setPassPhrase] = useState<string>("")
   //Input State, For the Password
   const [inputType, setInputType] = useState<"text" | "password">("password");
   //State for the inputs
@@ -49,8 +50,8 @@ export default function Register() {
   
   const formData = state;
 
-  if (process.env.ACCOUNT_CREATION_PASSPHRASE === state.passPhrase) {
-    toast.error("The Passphrase you entered is not correct.")
+  if (passPhrase !== process.env.ACCOUNT_CREATION_PASSPHRASE) {
+    toast.error("LMAO, you are playing, STOP PLAYING!!!")
     return
   }
     makeApiRequest('/register', 'post', formData, {
@@ -116,9 +117,8 @@ export default function Register() {
                   type="text"
                   name="passPhrase"
                   id="passPhrase"
-                  value={state.passPhrase}
                   placeholder="Enter The Passphrase"
-                  onChange={handleChange}
+                  onChange={(event: any) => setPassPhrase(event.target.value)}
                 />
                 <GoPasskeyFill
                   size={18}

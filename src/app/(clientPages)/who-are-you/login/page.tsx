@@ -2,7 +2,9 @@
 import { useState, useRef, FormEvent } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-import { makeApiRequest } from "@/lib/apiUtils";
+import { signIn } from "next-auth/react";
+import { redirect } from 'next/navigation'
+
 
 //Import Icons
 import { MdEmail } from "react-icons/md";
@@ -39,20 +41,22 @@ export default function Login() {
   //For the Submit Function
   const onSubmit = (event: FormEvent) => {
   event.preventDefault();
+  signIn("credential", {
+    ...state,
+    redirect: false
+  }).then((callback) => {
 
-  const formData = state;
+    if(callback?.ok){
+      toast.success("Welcome")
+      redirect("/admin/dashboard")
+    }
 
-    makeApiRequest('/login', 'post', formData, {
-    onSuccess: () => {
-      // Handle success
-      handleFormReset();
-      toast.success("Account was created successfully.");
-    },
-    onError: () => {
-      // Handle error
-      toast.error("Account was not created try again later.");
-    },
- });
+    if(callback?.error){
+      toast.error("Wrong Email or Password")
+      throw new Error("Wrong Credentials")
+    }
+
+  })
 };
 
   return (

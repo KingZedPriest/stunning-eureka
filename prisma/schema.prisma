@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//Schemas
+
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  email          String?    @unique
+  emailVerified  DateTime?
+  hashedPassword String?
+  role           UserRole?  @default(USER)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  packages       Package[]
+}
+
+model Package {
+  id                    String                @id @default(auto()) @map("_id") @db.ObjectId
+  trackingNumber        String                @unique
+  originPort            String
+  destinationPort       String
+  transportationMode    TransportationMode
+  pieces                Int
+  weight                Float
+  length                Float
+  width                 Float
+  height                Float
+  deliveryRequiredDate  DateTime?
+  deliveryRequiredTime  String?
+  estimatedDeliveryDate DateTime?
+  estimatedDeliveryTime String?
+  statusChanges         PackageStatusChange[]
+  timeCreated           DateTime              @default(now())
+  dateCreated           DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String                @db.ObjectId
+  user                  User                  @relation(fields: [userId], references: [id])
+}
+
+model PackageStatusChange {
+  id        String        @id @default(auto()) @map("_id") @db.ObjectId
+  timestamp DateTime      @default(now())
+  status    PackageStatus
+  package   Package       @relation(fields: [packageId], references: [id])
+  packageId String        @db.ObjectId
+}
+
+//Enums
+
+enum UserRole {
+  USER
+  SUPER_ADMIN
+}
+
+enum TransportationMode {
+  Flight
+  Ship
+  Road
+  Rail
+}
+
+enum PackageStatus {
+  PickedUp
+  PackageReceived
+  InTransitRoad
+  InFlight
+  InShip
+  InRail
+  Arrived
+  OutForDelivery
+  Delivered
+}
