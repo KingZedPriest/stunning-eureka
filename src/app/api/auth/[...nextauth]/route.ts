@@ -9,19 +9,20 @@ export const authOptions:AuthOptions = {
     providers: [
         CredentialsProvider({
             credentials: {
-                emails: {label:"email", type: "text"},
+                email: {label:"email", type: "email"},
                 password: {label: "password", type: "password"}
             },
             async authorize(credentials){
 
                 //Check if there is an email or password
-                if(!credentials?.emails || credentials?.password){
+                if(!credentials?.email || !credentials?.password){
                     throw new Error("Invalid Credentials") 
                 }
+
                 //Checks the email in the Database
                 const user = await prisma.user.findUnique({
                     where: {
-                        email: credentials.emails
+                        email: credentials.email.toLowerCase()
                     }
                 })
                 //Checks if the user has a hashed password in the DB

@@ -10,26 +10,27 @@ export async function POST(request:Request){
         email,
         password
     } = body
-
     if(!name || !email || !password) {
         return new NextResponse('Missing Fields', { status: 400 })
     }
 
+    const lowercasedEmail = email.toLowerCase();
+
     const exist = await prisma.user.findUnique({
         where: {
-            email
+            email: lowercasedEmail
         }
     });
 
     if(exist) {
-        throw new Error('Email already exists')
+        return new NextResponse('Email already exists', { status: 409 });
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
     const user = await prisma.user.create({
         data: {
             name,
-            email,
+            email: lowercasedEmail,
             hashedPassword
         }
     })

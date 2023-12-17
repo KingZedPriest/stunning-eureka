@@ -24,7 +24,7 @@ export const  makeApiRequest = (
         onSuccess();
       }
     })
-    .catch((error) => {
+    .catch((error: any) => {
       if (onError) {
         onError(error);
       }
