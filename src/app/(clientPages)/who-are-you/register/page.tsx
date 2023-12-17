@@ -3,6 +3,7 @@ import { useState, useRef, FormEvent } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
 import { makeApiRequest } from "@/lib/apiUtils";
+import { useRouter } from 'next/navigation';
 
 
 //Import Icons
@@ -24,6 +25,8 @@ const initialState:InitialStateProps = {
   password: ""
 }
 export default function Register() {
+
+  const router = useRouter();
   //State For The PassPhrase
   const [passPhrase, setPassPhrase] = useState<string>("")
   //Input State, For the Password
@@ -43,6 +46,7 @@ export default function Register() {
   //Function for the Form Reset
   const handleFormReset = () => {
     setState(initialState);
+    setPassPhrase("")
   };
   //For the Function Submit
   const onSubmit = (event: FormEvent) => {
@@ -50,7 +54,7 @@ export default function Register() {
   
   const formData = state;
 
-  if (passPhrase !== process.env.ACCOUNT_CREATION_PASSPHRASE) {
+  if (passPhrase !== process.env.NEXT_PUBLIC_ACCOUNT_CREATION_PASSPHRASE) {
     toast.error("LMAO, you are playing, STOP PLAYING!!!")
     return
   }
@@ -60,9 +64,11 @@ export default function Register() {
       // Handle success
       handleFormReset();
       toast.success("Account was created successfully.");
+      router.push("/admin/dashboard");
     },
     onError: () => {
       // Handle error
+      handleFormReset();
        toast.error("Account was not created try again later.");
     },
   });

@@ -44,7 +44,7 @@ export const authOptions:AuthOptions = {
         })
     ],
     pages: {
-        signIn:"/login"
+        signIn:"/who-are-you/login"
     },
     //Enables debug only in development mode
     debug:process.env.NODE_ENV === "development",

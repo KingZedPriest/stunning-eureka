@@ -3,7 +3,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-
+import { signOut } from 'next-auth/react'
 
 //Import Icons
 import { GoHomeFill } from "react-icons/go";
@@ -52,13 +52,12 @@ const Sidebar = () => {
             <IoMdContact size={24} /> Contact
           </Link>
         </div>
-        <Link
-          href=""
-          prefetch
+        <button
+          onClick={() => signOut()}
           className={`absolute bottom-20 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
         >
           <LuLogOut size={24} /> Logout
-        </Link>
+        </button>
       </div>
       <LuMenuSquare
         className="relative left-4 top-4 mt-2 cursor-pointer text-orange focus:text-blue lg:hidden"
@@ -105,13 +104,12 @@ const Sidebar = () => {
             <IoMdContact size={24} /> Contact
           </Link>
             </div>
-            <Link
-              href=""
-              prefetch
+            <button
+              onClick={() => signOut()}
               className={`absolute bottom-20 flex items-center gap-x-3 rounded-md p-4 text-sm text-white duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange`}
             >
               <LuLogOut size={24} /> Logout
-            </Link>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

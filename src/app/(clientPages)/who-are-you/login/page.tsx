@@ -3,7 +3,7 @@ import { useState, useRef, FormEvent } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
 import { signIn } from "next-auth/react";
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 
 //Import Icons
@@ -20,6 +20,8 @@ const initialState:InitialStateProps = {
   password: ""
 }
 export default function Login() {
+
+  const router = useRouter();
   //Input State, For the Password
   const [inputType, setInputType] = useState<"text" | "password">("password");
   //State for the inputs
@@ -41,18 +43,20 @@ export default function Login() {
   //For the Submit Function
   const onSubmit = (event: FormEvent) => {
   event.preventDefault();
-  signIn("credential", {
+  signIn("credentials", {
     ...state,
-    redirect: false
+   redirect: false
   }).then((callback) => {
 
-    if(callback?.ok){
+    if(callback?.ok && !callback?.error){
       toast.success("Welcome")
-      redirect("/admin/dashboard")
+      handleFormReset();
+      router.push("/admin/dashboard");
     }
 
     if(callback?.error){
       toast.error("Wrong Email or Password")
+      handleFormReset();
       throw new Error("Wrong Credentials")
     }
 
@@ -74,7 +78,7 @@ export default function Login() {
             <Link href="/who-are-you/register">Create Account</Link>
           </span>
         </p>
-          <form className="mt-10 w-full">
+          <form className="mt-10 w-full" onSubmit={onSubmit}>
               
             <div className="relative mt-4 w-[20rem] md:w-[30rem]">
               <input
@@ -114,12 +118,8 @@ export default function Login() {
               />
             </div>
             <div className="flex w-[20rem] md:w-[30rem] mt-8 justify-between">
-              <button
-                className="w-full py-4 text-center text-xs md:text-sm rounded-md text-white bg-orange hover:text-orange hover:bg-[#EDEDEE] duration-500 hover:font-semibold"
-                type="submit"
-              >
-                Login
-              </button>
+              <input type="submit" value="Submit" className="cursor-pointer w-full py-4 text-center text-xs md:text-sm rounded-md text-white bg-orange hover:text-orange hover:bg-[#EDEDEE] duration-500 hover:font-semibold"
+ />
             </div>
           </form>
           </div>
