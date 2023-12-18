@@ -85,7 +85,7 @@ const onSubmit = async (event: FormEvent) => {
       handleFormReset()
       setLoading(false)
       toast.success("The Package was created successfully.");
-      router.push("/admin/orders")
+      router.refresh()
     },
     onError: (error: any) => {
       // Handle error
