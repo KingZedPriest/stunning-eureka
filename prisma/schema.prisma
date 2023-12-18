@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -21,7 +18,6 @@ model User {
   role           UserRole?  @default(USER)
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
-  packages       Package[]
 }
 
 model Package {
@@ -36,15 +32,11 @@ model Package {
   width                 Float
   height                Float
   deliveryRequiredDate  DateTime?
-  deliveryRequiredTime  String?
   estimatedDeliveryDate DateTime?
-  estimatedDeliveryTime String?
   statusChanges         PackageStatusChange[]
   timeCreated           DateTime              @default(now())
   dateCreated           DateTime              @default(now())
   updatedAt             DateTime              @updatedAt
-  userId                String                @db.ObjectId
-  user                  User                  @relation(fields: [userId], references: [id])
 }
 
 model PackageStatusChange {

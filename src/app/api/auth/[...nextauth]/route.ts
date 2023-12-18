@@ -16,7 +16,7 @@ export const authOptions:AuthOptions = {
 
                 //Check if there is an email or password
                 if(!credentials?.email || !credentials?.password){
-                    throw new Error("Invalid Credentials") 
+                    throw new Error("Missing Fields") 
                 }
 
                 //Checks the email in the Database
