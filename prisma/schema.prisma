@@ -31,8 +31,8 @@ model Package {
   length                Float
   width                 Float
   height                Float
-  deliveryRequiredDate  DateTime?
-  estimatedDeliveryDate DateTime?
+  deliveryRequiredDate  String
+  estimatedDeliveryDate String
   statusChanges         PackageStatusChange[]
   timeCreated           DateTime              @default(now())
   dateCreated           DateTime              @default(now())

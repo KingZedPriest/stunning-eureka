@@ -18,6 +18,11 @@ export async function POST(request: Request) {
     estimatedDeliveryDate,
   } = body;
 
+  if(!trackingNumber || !originPort || !destinationPort || !transportationMode || !pieces || !length || !weight || !width || !height || !deliveryRequiredDate || !estimatedDeliveryDate) {
+    return new NextResponse('Missing Fields', { status: 400 })
+}
+
+
   const newPackage = await prisma.package.create({
     data: {
       trackingNumber,

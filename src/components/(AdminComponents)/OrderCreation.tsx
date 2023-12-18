@@ -21,9 +21,9 @@ type InitialProps = {
   weight: number;
   width: number;
   height: number;
-  deliveryRequiredDate: Date;
+  deliveryRequiredDate: string;
   statusChanges: object;
-  estimatedDeliveryDateTime: Date;
+  estimatedDeliveryDate: string;
 };
 
 const initialState: InitialProps = {
@@ -36,16 +36,16 @@ const initialState: InitialProps = {
   weight: 0.0,
   width: 0.0,
   height: 0.0,
-  deliveryRequiredDate: new Date(),
+  deliveryRequiredDate: "",
   statusChanges: {},
-  estimatedDeliveryDateTime: new Date(),
+  estimatedDeliveryDate: "",
 };
 
 const OrderCreation = ({ onClose }: OrderDetailsProps) => {
   const router = useRouter();
   //Form State
   const [state, setState] = useState(initialState);
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
   //Tracking Code State and Function
   const [trackingCode, setTrackingCode] = useState<string>("");
 
@@ -57,15 +57,22 @@ const OrderCreation = ({ onClose }: OrderDetailsProps) => {
   //Function for the State Changing
   const handleChange = (event: any) => {
     const { name, value } = event.target;
-  
+
     // Check if the property is one of the numeric fields
-    const isNumericField = ['pieces', 'length', 'weight', 'width', 'height'].includes(name);
-  
+    const isNumericField = [
+      "pieces",
+      "length",
+      "weight",
+      "width",
+      "height",
+    ].includes(name);
+
     // If it's a numeric field, parse the value as a number
     const updatedValue = isNumericField ? parseFloat(value) : value;
-  
+
     setState({ ...state, [name]: updatedValue });
   };
+
   //Close Function
   const closeToggle = () => {
     onClose();
@@ -74,27 +81,33 @@ const OrderCreation = ({ onClose }: OrderDetailsProps) => {
   const handleFormReset = () => {
     setState(initialState);
   };
-//Submit function
-const onSubmit = async (event: FormEvent) => {
-  event.preventDefault();
-  setLoading(true)
+  //Submit function
+  const onSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    setLoading(true);
 
-  makeApiRequest("/packages", "post", state, {
-    onSuccess: () => {
-      // Handle success
-      handleFormReset()
-      setLoading(false)
-      toast.success("The Package was created successfully.");
-      router.refresh()
-    },
-    onError: (error: any) => {
-      // Handle error
-      handleFormReset()
-      setLoading(false)
-      toast.error("Package wasn't created. Please try again.");
-    }
-  });
-}
+    makeApiRequest("/packages", "post", state, {
+      onSuccess: () => {
+        // Handle success
+        handleFormReset()
+        setLoading(false);
+        toast.success("The Package was created successfully.");
+        router.refresh();
+      },
+      onError: (error: any) => {
+        // Handle error
+        handleFormReset()
+        setLoading(false);
+        if (error) {
+          if (error === "Missing Fields") {
+            toast.error("Please Fill In All The Details");
+          } else {
+            toast.error("Package Wasn't Created, Please Try Again Later");
+          }
+        }
+      },
+    });
+  };
   return (
     <main
       className={`fixed left-0 top-0 z-[70] flex h-screen w-full items-center justify-center bg-black bg-opacity-50`}
@@ -111,39 +124,32 @@ const onSubmit = async (event: FormEvent) => {
           Fill In The Details of The New Package
         </p>
         <form className="mt-4 text-xs md:text-sm" onSubmit={onSubmit}>
-          
-            <div className="w-full">
-              <label
-                htmlFor="trackingNumber"
-                className="block cursor-pointer"
-              >
-                Tracking Number
-              </label>
-              <input
-                required
-                value={state.trackingNumber}
-                onChange={handleChange}
-                type="text"
-                name="trackingNumber"
-                id="trackingNumber"
-                className="mt-2 w-full rounded-md border border-black bg-white p-2 text-black focus:outline-orange md:p-3"
-              />
-            </div>
-            <div className="flex items-center gap-x-3 md:gap-x-5 mt-2">
-              <p className="text-xs md:text-sm w-[70%]">{trackingCode}</p>
-              <button
+          <div className="w-full">
+            <label htmlFor="trackingNumber" className="block cursor-pointer">
+              Tracking Number
+            </label>
+            <input
+              required
+              value={state.trackingNumber}
+              onChange={handleChange}
+              type="text"
+              name="trackingNumber"
+              id="trackingNumber"
+              className="mt-2 w-full rounded-md border border-black bg-white p-2 text-black focus:outline-orange md:p-3"
+            />
+          </div>
+          <div className="mt-2 flex items-center gap-x-3 md:gap-x-5">
+            <p className="w-[70%] text-xs md:text-sm">{trackingCode}</p>
+            <button
               type="button"
               onClick={handleGenerateCode}
               className="w-[30%] rounded-md bg-orange py-2 text-center text-xs text-white duration-500 hover:bg-orange1 sm:text-sm md:py-3 md:text-base"
             >
               Generate
             </button>
-            </div>
+          </div>
           <div className="mt-2">
-            <label
-              htmlFor="originPort"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="originPort" className="block cursor-pointer">
               Origin Port
             </label>
             <input
@@ -158,10 +164,7 @@ const onSubmit = async (event: FormEvent) => {
             />
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="destinationPort"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="destinationPort" className="block cursor-pointer">
               Destination Port
             </label>
             <input
@@ -190,6 +193,7 @@ const onSubmit = async (event: FormEvent) => {
               id="transportationMode"
               className="mt-2 w-full cursor-pointer rounded-md border border-black bg-white p-3 text-xs text-black focus:outline-orange md:text-sm"
             >
+              <option value="">Mode of Transportation</option>
               <option value="Flight">Flight</option>
               <option value="Ship">Ship</option>
               <option value="Road">Road</option>
@@ -197,10 +201,7 @@ const onSubmit = async (event: FormEvent) => {
             </select>
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="pieces"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="pieces" className="block cursor-pointer">
               Quantity
             </label>
             <input
@@ -215,10 +216,7 @@ const onSubmit = async (event: FormEvent) => {
             />
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="weight"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="weight" className="block cursor-pointer">
               Weight
             </label>
             <input
@@ -233,10 +231,7 @@ const onSubmit = async (event: FormEvent) => {
             />
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="length"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="length" className="block cursor-pointer">
               Length
             </label>
             <input
@@ -251,10 +246,7 @@ const onSubmit = async (event: FormEvent) => {
             />
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="width"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="width" className="block cursor-pointer">
               Width
             </label>
             <input
@@ -269,10 +261,7 @@ const onSubmit = async (event: FormEvent) => {
             />
           </div>
           <div className="mt-4">
-            <label
-              htmlFor="height"
-              className="block cursor-pointer"
-            >
+            <label htmlFor="height" className="block cursor-pointer">
               Height
             </label>
             <input
@@ -288,7 +277,7 @@ const onSubmit = async (event: FormEvent) => {
           </div>
           <div className="mt-4">
             <label
-              htmlFor="deliveryRequiredDateTime"
+              htmlFor="deliveryRequiredDate"
               className="block cursor-pointer"
             >
               Delivery Required Date and Time
@@ -297,14 +286,14 @@ const onSubmit = async (event: FormEvent) => {
               required
               onChange={handleChange}
               type="datetime-local"
-              name="deliveryRequiredDateTime"
-              id="deliveryRequiredDateTime"
+              name="deliveryRequiredDate"
+              id="deliveryRequiredDate"
               className="mt-2 w-full rounded-md border border-black bg-white p-2 text-black focus:outline-orange md:p-3"
             />
           </div>
           <div className="mt-4">
             <label
-              htmlFor="estimatedDeliveryDateTime"
+              htmlFor="estimatedDeliveryDate"
               className="block cursor-pointer"
             >
               Estimated Time and Date
@@ -313,8 +302,8 @@ const onSubmit = async (event: FormEvent) => {
               required
               onChange={handleChange}
               type="datetime-local"
-              name="estimatedDeliveryDateTime"
-              id="estimatedDeliveryDateTime"
+              name="estimatedDeliveryDate"
+              id="estimatedDeliveryDate"
               className="mt-2 w-full rounded-md border border-black bg-white p-2 text-black focus:outline-orange md:p-3"
             />
           </div>

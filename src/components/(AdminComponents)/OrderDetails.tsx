@@ -9,11 +9,12 @@ import { RxCross1 } from "react-icons/rx";
 
 type OrderDetailsProps = {
   onClose: () => void;
+  packageId: string
 }
 const OrderDetails = ({onClose}: OrderDetailsProps) => {
   //Form States
   const router = useRouter()
-  const [packageId, setPackageId] = useState<string>("657fcd932776d0e4af2ac4eb")
+  const [packageId, setPackageId] = useState<string>("")
   const [packageStatus, setPackageStatus] = useState<string>("")
   const [loading, setLoading] = useState<boolean>(false)
   //Close Function
@@ -81,7 +82,7 @@ const OrderDetails = ({onClose}: OrderDetailsProps) => {
                     <option value="Delivered">Package Delivered</option>
                   </select>
                   <div className="mt-8">
-                  <input type="submit" value={loading ? "Updating Package Status" : "Update Package Status"} className="w-full p-2 md:p-3 cursor-pointer bg-orange text-white rounded-md font-semibold hover:bg-orange1 duration-500"/>
+                  <input type="submit" value={loading ? "Updating Package Status" : "Update Package Status"} className="text-xs md:text-sm w-full p-2 md:p-3 cursor-pointer bg-orange text-white rounded-md font-semibold hover:bg-orange1 duration-500"/>
                 </div>
                 </form>
             </div>

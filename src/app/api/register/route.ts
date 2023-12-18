@@ -10,6 +10,7 @@ export async function POST(request:Request){
         email,
         password
     } = body
+    
     if(!name || !email || !password) {
         return new NextResponse('Missing Fields', { status: 400 })
     }
