@@ -1,10 +1,12 @@
 import getPackages from "@/app/actions/getPackages";
+
 //Import Needed Components
 import AdminHeading from "@/components/(AdminComponents)/AdminHeading";
 import OrderSummary from "@/components/(AdminComponents)/OrderSummary";
 
 const page = async () => {
     const packages = await getPackages()
+
     return ( 
         <main>
             <div className="px-4 py-4 lg:px-10">

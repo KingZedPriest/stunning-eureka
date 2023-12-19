@@ -310,8 +310,8 @@ const OrderCreation = ({ onClose }: OrderDetailsProps) => {
           <div className="mt-8">
             <input
               type="submit"
-              value={loading ? "Creating Your Package" : "Create Package"}
-              className="w-full cursor-pointer rounded-md bg-orange p-2 font-semibold text-white duration-500 hover:bg-orange1 md:p-3"
+              value={loading ? "Creating Your Package..." : "Create Package"}
+              className="w-full cursor-pointer rounded-md bg-orange font-semibold text-white duration-500 hover:bg-orange1 p-3"
             />
           </div>
         </form>

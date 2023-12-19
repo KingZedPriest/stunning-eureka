@@ -11,5 +11,6 @@ export default async function getPackages() {
         
     }catch(error: any){
         console.error(error)
+        throw error
     }
 }
