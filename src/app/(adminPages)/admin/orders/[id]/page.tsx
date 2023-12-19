@@ -29,7 +29,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
     return ( 
         <main>
             <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto mt-20">
-            <p className="text-xs sm:text-sm md:text-base font-bold mt-4 text-center">Package Details</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold mt-4 text-center">Package Details</p>
             <div className="flex flex-col gap-y-3 mt-10">
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Tracking Code <span className="text-orange">{trackingNumber}</span></p>
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Origin Port <span className="text-orange">{originPort}</span></p>
@@ -42,7 +42,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Height (CM)<span className="text-orange">{height} CM</span></p>
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Delivery Required Date and Time<span className="text-orange text-end">{formatDateTime(deliveryRequiredDate)}</span></p>
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Estimated Delivery Date and Time<span className="text-orange text-end">{formatDateTime(estimatedDeliveryDate)}</span></p>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Package Date Created<span className="text-orange text-end">{formatDate(dateCreated)}</span></p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold flex justify-between gap-x-5">Package Date Created<span className="text-orange text-endd">{formatDate(dateCreated)}</span></p>
                 <div className="border-b border-black my-4"></div>
                 <p className="text-xs sm:text-sm md:text-base font-bold mt-4 text-center">Update Package Status</p>
                 <form>
