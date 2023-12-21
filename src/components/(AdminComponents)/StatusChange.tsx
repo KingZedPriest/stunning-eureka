@@ -92,7 +92,7 @@ const StatusChange = ({ thePackageID }: { thePackageID: string }) => {
         </div>
       </form>
       <div className="my-4 text-center">
-      <Link className="text-xs md:text-sm hover:underline duration-500 font-semibold" href="/tracking" target="_blank">Confused about the package status? Kindly Check it here.</Link>
+      <Link className="text-[0.6rem] sm:text-xs md:text-sm hover:underline duration-500 font-semibold" href="/tracking" target="_blank">Confused about the package status? Kindly Check it here.</Link>
       </div>
     </main>
   );
