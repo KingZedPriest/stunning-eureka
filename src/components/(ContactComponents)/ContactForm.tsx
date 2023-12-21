@@ -1,4 +1,8 @@
 "use client"
+import { FormEvent, useState } from "react";
+import { toast } from "sonner";
+import { makeApiRequest } from "@/lib/apiUtils";
+import { useRouter } from "next/navigation";
 //Import Needed Components
 import Heading from "../h1";
 
@@ -6,7 +10,62 @@ import Heading from "../h1";
 import { MdEmail } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
 
+
+type InitialStateProps = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+const initialState: InitialStateProps = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 const ContactForm = () => {
+  const router = useRouter();
+  //State for the form
+  const [state, setState] = useState(initialState)
+  const [loading, setLoading] = useState<boolean>(false)
+
+   //Function for the State Changing
+   const handleChange = (event: any) => {
+    setState({ ...state, [event.target.name]: event.target.value });
+  };
+  //Function for the Form Reset
+  const handleFormReset = () => {
+    setState(initialState);
+  };
+
+  //For the Function Submit
+  const onSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    setLoading(true)
+    const formData = state;
+
+    makeApiRequest("/contactForm", "post", formData, {
+      onSuccess: () => {
+        // Handle success
+        handleFormReset();
+        setLoading(false)
+        toast.success("Thanks for reaching out! We've received your message and will be in touch shortly.");
+        router.refresh();
+      },
+      onError: (error: any) => {
+        // Handle error
+        handleFormReset();
+        setLoading(false)
+        if (error) {
+          if (error === "Missing Fields") {
+            toast.error("Please Fill In All The Details");
+          } else {
+            toast.error("Your Response Wasn't Submitted, Please Try Again Later.");
+          }
+        }
+      },
+    });
+  };
   return (
     <main className="px-4 py-[8rem] sm:px-10 md:px-12 lg:px-14 bg-bgWhite">
       <div className="flex flex-col gap-y-10 lg:flex-row lg:justify-between lg:gap-x-10 lg:gap-y-0">
@@ -40,14 +99,14 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="w-full lg:w-[50%]">
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="flex gap-x-5">
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
-                    <input type="email" name="email" id="email" placeholder="Enter Your Email Address" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
+                    <input required type="text" name="name" onChange={handleChange} value={state.name} id="name" placeholder="Enter Your Name" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
+                    <input required type="email" name="email" onChange={handleChange} value={state.email} id="email" placeholder="Enter Your Email Address" className="bg-white w-1/2 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
                 </div>
-                <input type="text" name="subject" id="subject" placeholder="Enter Your Subject Here" className="bg-white w-full mt-6 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
-                <textarea name="message" id="message" placeholder="Enter Your Message Here" className="bg-white w-full h-40 mt-10 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue resize-none"></textarea>
-                <input type="submit" value="Submit Button" className="cursor-pointer p-3 w-40 bg-orange mt-6 text-xs md:text-sm text-center text-white rounded-md hover:bg-[#d64514]" />
+                <input required type="text" name="subject" onChange={handleChange} value={state.subject} id="subject" placeholder="Enter Your Subject Here" className="bg-white w-full mt-6 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue"/>
+                <textarea required name="message" onChange={handleChange} value={state.message} id="message" placeholder="Enter Your Message Here" className="bg-white w-full h-40 mt-10 p-3 placeholder:text-xs md:placeholder:text-sm border border-orange border-opacity-50 rounded-md focus:outline-none focus:border-2 caret-blue resize-none"></textarea>
+                <input type="submit" value={loading ? "Submitting ..." : "Submit Button"} className="cursor-pointer p-3 w-40 bg-orange mt-6 text-xs md:text-sm text-center text-white rounded-md hover:bg-[#d64514]" />
             </form>
         </div>
       </div>

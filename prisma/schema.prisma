@@ -12,10 +12,10 @@ datasource db {
 model User {
   id             String    @id @default(auto()) @map("_id") @db.ObjectId
   name           String?
-  email          String?    @unique
+  email          String?   @unique
   emailVerified  DateTime?
   hashedPassword String?
-  role           UserRole?  @default(USER)
+  role           UserRole? @default(USER)
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
 }
@@ -45,6 +45,27 @@ model PackageStatusChange {
   status    PackageStatus
   package   Package       @relation(fields: [packageId], references: [id])
   packageId String        @db.ObjectId
+}
+
+model ContactForm {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Quote {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  fullName         String
+  email            String
+  phoneNumber      String
+  pickupLocation   String
+  deliveryLocation String
+  chosenDateTime   String
+  importantDetails String
+  createdAt        DateTime @default(now())
 }
 
 //Enums

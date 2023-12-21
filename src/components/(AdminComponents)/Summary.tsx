@@ -4,8 +4,15 @@ import { formatDate } from "@/lib/dateUtils";
 import { PiPackageFill } from "react-icons/pi";
 import { TbProgressDown } from "react-icons/tb";
 import { BsFillPatchCheckFill } from "react-icons/bs";
+import { BsInfoCircleFill } from "react-icons/bs";
+ 
+type PackageProps = {
+    packageLength : number
+    packagesDelivered: number
+    contactForms: number
+}
 
-const Summary = () => {
+const Summary = ({packageLength, packagesDelivered, contactForms}: PackageProps ) => {
     //For the Date
     const currentDate = new Date()
     const formattedDate = formatDate(currentDate)
@@ -18,21 +25,21 @@ const Summary = () => {
                <div className="w-1/4 min-w-[18rem] bg-[#4CB9E7] p-8 flex gap-x-5 rounded-md">
                <PiPackageFill className="text-white" size={40}/>
                     <div className="text-white ">
-                        <p className="text-2xl md:text-3xl font-bold">0</p>
+                        <p className="text-2xl md:text-3xl font-bold">{packageLength}</p>
                         <p className="text-base">Total Packages</p>
                     </div>
                 </div>
                 <div className="w-1/4 min-w-[18rem] bg-[#FB8B24] p-8 flex gap-x-5 rounded-md">
-                    <TbProgressDown className="text-white" size={40}/>
+                    <BsInfoCircleFill className="text-white" size={40}/>
                     <div className="text-white ">
-                        <p className="text-2xl md:text-3xl font-bold">0</p>
-                        <p className="text-base">Packages In Progress</p>
+                        <p className="text-2xl md:text-3xl font-bold">{contactForms}</p>
+                        <p className="text-base">Total Support</p>
                     </div>
                 </div>
                 <div className="w-1/4 min-w-[18rem] bg-[#65B741] p-8 flex gap-x-5 rounded-md">
                     <BsFillPatchCheckFill className="text-white" size={40}/>
                     <div className="text-white ">
-                        <p className="text-2xl md:text-3xl font-bold">0</p>
+                        <p className="text-2xl md:text-3xl font-bold">{packagesDelivered}</p>
                         <p className="text-base">Total Packages Delivered</p>
                     </div>
                 </div> 

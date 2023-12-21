@@ -2,16 +2,26 @@
 import AdminHeading from "@/components/(AdminComponents)/AdminHeading";
 import Summary from "@/components/(AdminComponents)/Summary";
 import LastPackages from "@/components/(AdminComponents)/Transaction";
+import getPackages from "@/app/actions/getPackages";
+import getAllStatus from "@/app/actions/getAllStatus";
+import getAllContactForms from "@/app/actions/getAllContactForm";
 
-const page = () => {
+
+const page = async () => {
+   const packages = await getPackages()
+   const status = await getAllStatus()
+   const forms = await getAllContactForms()
+   //Sort the status and get the values
+   const deliveredItems = status.filter(item => item.status === 'Delivered');
+
     return ( 
         <main>
          <div className="px-4 py-4 lg:px-10">
             <AdminHeading route="home" coloredRoute="dashboard"/>
          </div>
           <div className="bg-bgWhite px-4 py-6 lg:px-10 h-screen">
-            <Summary />
-            <LastPackages />
+            <Summary packageLength={packages.length} packagesDelivered={deliveredItems.length} contactForms={forms.length}/>
+            <LastPackages orders={packages} />
            </div> 
         </main>
      );
