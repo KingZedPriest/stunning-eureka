@@ -1,3 +1,4 @@
+"use client"
 //Import Needed Components
 import Heading from "../h1";
 

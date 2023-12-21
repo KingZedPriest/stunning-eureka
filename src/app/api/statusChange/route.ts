@@ -5,16 +5,21 @@ export async function POST (request: Request){
     const body = await request.json();
 
     const {
-        status,
-        packageId
+        statusChanges,
+        packageID
     } = body
+
+    if(!statusChanges || !packageID){
+        
+        return new NextResponse('Missing Fields', { status: 400 })
+    }
 
     const newStatus = await prisma.packageStatusChange.create({
         data: {
-            status,
+            status: statusChanges,
             package: {
                 connect: {
-                    id:packageId
+                    id:packageID
                 }
             }
         }
