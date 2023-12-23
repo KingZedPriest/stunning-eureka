@@ -6,13 +6,12 @@ import { RxCross1 } from "react-icons/rx";
 type statusProps = {
     theStatus: string,
     onHideModal: () => void
-    show: boolean
 }
 
-export default function Modal({theStatus, onHideModal, show}: statusProps){
+export default function Modal({theStatus, onHideModal}: statusProps){
     
     return(
-        <main className={`${!show ? "hidden" : ""} fixed h-screen w-full bg-black bg-opacity-50 flex items-center justify-center z-[70] top-0 left-0`}>
+        <main className={`fixed h-screen w-full bg-black bg-opacity-50 flex items-center justify-center z-[70] top-0 left-0`}>
             <div className="w-80 h-80 md:h-96 md:w-96 bg-bgWhite p-4">
                 <div className="flex flex-col items-end">
                     <RxCross1 size={24} className="cursor-pointer" onClick={onHideModal}/>

@@ -69,7 +69,7 @@ export default function QuoteForm(){
 
     return(
         <>
-        {show && <StatusModal theStatus={status} onHideModal={handleHideModal} show={show}/>}
+        {show && <StatusModal theStatus={status} onHideModal={handleHideModal}/>}
         <div className="bg-white px-2 sm:px-4 md:px-6 lg:px-8 py-8 sm:w-[80%] md:w-[90%] lg:w-[60%] mx-auto">
             <p className="text-orange font-bold">Personal Data</p>
             <form className="mt-8 text-xs sm:text-sm md:text-base" onSubmit={onSubmit}>
