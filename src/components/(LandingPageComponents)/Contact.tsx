@@ -129,7 +129,6 @@ const Contact = () => {
                     ({maxLength - text.length}/{maxLength})
                   </span>
                 </label>
-                Copy code
                 <textarea
                   required
                   onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -167,11 +166,11 @@ const Contact = () => {
               <div>
                 <h1
                   className="cursor-grabbing text-base font-bold md:text-lg"
-                  onClick={handleCopySupport}
+                  onClick={handleCopyPartnership}
                 >
                   Partnership@unitedtraverse.com
                 </h1>
-                {supportCopied && (
+                {partnershipCopied && (
                   <p className="text-xs">Copied to clipboard!</p>
                 )}
               </div>
@@ -189,11 +188,11 @@ const Contact = () => {
               <div>
                 <h1
                   className="cursor-grabbing text-base font-bold md:text-lg"
-                  onClick={handleCopyPartnership}
+                  onClick={handleCopySupport}
                 >
                   Support@unitedtraverse.com
                 </h1>
-                {partnershipCopied && (
+                {supportCopied && (
                   <p className="text-xs">Copied to clipboard!</p>
                 )}
               </div>

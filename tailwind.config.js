@@ -21,6 +21,8 @@ module.exports = {
         orange: "#d64514",
         orange1: "#e8724a",
         blue: "#013a94",
+        bgGreen: "#4D9F45",
+        bgGrey: "#F2F1EB",
         footerBrown: "#231f20",
         lightBlue: "#4a8ae8",
         ratingYellow: "#FFA41B",
