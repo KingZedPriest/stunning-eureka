@@ -24,7 +24,6 @@ export default function Footer(){
             <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/contact">Partner With Us</Link>
             <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/services">Services</Link>
             <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/company">Why Us?</Link>
-            <Link className="mt-2 hover:bg-orange duration-500 hover:px-2 rounded-md py-2" href="/career">Career</Link>
             </div>
             <div className="flex flex-col">
             <h4 className="font-bold text-orange">Contact Us</h4>
