@@ -7,7 +7,7 @@ import { signOut } from 'next-auth/react'
 
 //Import Icons
 import { GoHomeFill } from "react-icons/go";
-import { FaTruck } from "react-icons/fa";
+import { FaFileSignature } from "react-icons/fa6";
 import { MdReceiptLong } from "react-icons/md";
 import { RiAdminFill } from "react-icons/ri";
 import { LuLogOut } from "react-icons/lu";
@@ -50,6 +50,13 @@ const Sidebar = () => {
             className={`${pathName === "/admin/contact" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <IoMdContact size={24} /> Contact
+          </Link>
+          <Link
+            href="/admin/quote"
+            prefetch
+            className={`${pathName === "/admin/quote" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+          >
+            <FaFileSignature size={24} /> Quotes
           </Link>
         </div>
         <button
@@ -102,6 +109,13 @@ const Sidebar = () => {
             className={`${pathName === "/admin/contact" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
           >
             <IoMdContact size={24} /> Contact
+          </Link>
+          <Link
+            href="/admin/quote"
+            prefetch
+            className={`${pathName === "/admin/quote" ? "text-orange -translate-y-2 translate-x-2" : "text-white"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-orange hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-orange active:text-orange md:text-base`}
+          >
+            <FaFileSignature size={24} /> Quotes
           </Link>
             </div>
             <button

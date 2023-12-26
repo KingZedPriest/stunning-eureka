@@ -1,4 +1,4 @@
-const ContactFormDetails = () => {
+const ContactFormDetails = (formDetails : any) => {
   return (
     <main className="mt-10 flex flex-wrap gap-x-10 gap-y-3">
       <div className="w-full">

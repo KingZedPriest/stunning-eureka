@@ -2,7 +2,7 @@
 import { formatDate } from "@/lib/dateUtils";
 //Import Needed Icons
 import { PiPackageFill } from "react-icons/pi";
-import { TbProgressDown } from "react-icons/tb";
+import { MdReceiptLong } from "react-icons/md";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { BsInfoCircleFill } from "react-icons/bs";
  
@@ -10,9 +10,10 @@ type PackageProps = {
     packageLength : number
     packagesDelivered: number
     contactForms: number
+    quotes: number
 }
 
-const Summary = ({packageLength, packagesDelivered, contactForms}: PackageProps ) => {
+const Summary = ({packageLength, packagesDelivered, contactForms, quotes}: PackageProps ) => {
     //For the Date
     const currentDate = new Date()
     const formattedDate = formatDate(currentDate)
@@ -41,6 +42,13 @@ const Summary = ({packageLength, packagesDelivered, contactForms}: PackageProps 
                     <div className="text-white ">
                         <p className="text-2xl md:text-3xl font-bold">{packagesDelivered}</p>
                         <p className="text-base">Total Packages Delivered</p>
+                    </div>
+                </div> 
+                <div className="w-1/4 min-w-[18rem] bg-red-600 p-8 flex gap-x-5 rounded-md">
+                    <MdReceiptLong className="text-white" size={40}/>
+                    <div className="text-white ">
+                        <p className="text-2xl md:text-3xl font-bold">{quotes}</p>
+                        <p className="text-base">Total Requested Quotes</p>
                     </div>
                 </div> 
             </div>

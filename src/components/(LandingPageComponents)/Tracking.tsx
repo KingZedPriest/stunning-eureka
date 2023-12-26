@@ -78,8 +78,8 @@ const Tracking = ({trackingID, packageTracking, onHideModal }: trackingProps) =>
                     <div className="relative">
                         <div className={`h-[5.5rem] w-3 ${fifthStatus ? "bg-bgGreen" : "bg-bgGrey"} mx-auto`}></div>
                     </div>
-                    <div className="relative flex items-center">
-                       <div className={`w-10 h-10 rounded-[50%] ${fifthStatus ? "bg-bgGreen" : "bg-bgGrey"} flex items-center justify-center -mt-2`}><GoCheckCircle className={`${fifthStatus ? "text-bgGreen" : "text-bgGrey"}`} size={26}/></div>
+                    <div className="relative flex gap-x-3 items-center">
+                       <div className={`w-10 h-10 rounded-[50%] ${fifthStatus ? "bg-bgGreen" : "bg-bgGrey"} flex items-center justify-center -mt-2`}><GoCheckCircle className={`${fifthStatus ? "text-white" : "text-bgGrey"}`} size={26}/></div>
                        <div className="absolute left-[100%] w-[14rem] sm:w-[20rem] -mt-2">
                             <p className="font-light text-sm sm:text-base md:text-lg">{fifthStatus && "DELIVERED"}</p>
                             <p className={`${fifthStatus ? "" : "hidden"} text-xs font-semibold text-bgGreen -mt-1`}>{packageTracking.destinationPort}</p>

@@ -1,16 +1,18 @@
 //Import Needed Components
-import getAllContactForms from "@/app/actions/getAllContactForm";
 import AdminHeading from "@/components/(AdminComponents)/AdminHeading";
-import ContactFormDetails from "@/components/(AdminComponents)/ContactFormDetails";
+import getAllQuote from "@/app/actions/getAllQuote";
+import QuoteDetails from "@/components/(AdminComponents)/QuoteDetails";
+
 const page = async () => {
-    const contactDetails = await getAllContactForms()
+    const quoteDetails = await getAllQuote()
+    console.log({quoteDetails})
     return ( 
         <main>
             <div className="px-4 py-4 lg:px-10">
-                <AdminHeading route="home" coloredRoute="contact"/>
+                <AdminHeading route="home" coloredRoute="Quotes"/>
             </div>
             <div className="bg-bgWhite px-4 py-6 lg:px-10 h-screen">
-                <ContactFormDetails formDetails = {contactDetails}/>
+                <QuoteDetails quoteDetails = {quoteDetails}/>
             </div>
         </main>
      );

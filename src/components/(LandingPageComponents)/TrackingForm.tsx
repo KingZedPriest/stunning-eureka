@@ -10,6 +10,7 @@ export default function TrackingForm() {
   const [trackingID, setTrackingID] = useState<string>("");
   const [packageDetails, setPackageDetails] = useState<any>();
   const [show, setShow] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false)
   //Functions
   const handleHideModal = () => {
     return setShow((prev) => !prev);
@@ -19,15 +20,17 @@ export default function TrackingForm() {
   };
   const trackPackage = async (formData : FormData) => {
     const trackingNumber = formData.get("trackingNumber")
-    
+    setLoading(true)
     try {
       if (trackingNumber) {
       const packageData = await getPackageWithStatusChanges(trackingNumber as string);
       setPackageDetails(packageData);
       toast.success("Your Package Tracking Details.")
+      setLoading(false)
       handleHideModal()
       }
     } catch (error) {
+      setLoading(false)
       toast.error("Package tracking unavailable. Please try again later.")
     }
   }
@@ -60,7 +63,7 @@ export default function TrackingForm() {
             type="submit"
             className="mt-4 w-full cursor-pointer bg-orange py-2 text-center text-white duration-500 hover:bg-blue md:py-3"
           >
-            Track
+            {loading ? "Tracking Package..." : "Track"}
           </button>
         </form>
       </div>
