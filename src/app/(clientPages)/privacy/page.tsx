@@ -273,6 +273,7 @@ export default function Privacy() {
             <li>Let you know about any important changes to our business or policies.</li>
           </ul>
         </div>
+        <p className="text-xs md:text-md text-red-600">This is the summary of the policy. Contact us for the full version. THANK YOU</p>
         <p className="font-bold uppercase text-xs sm:text-sm lg:text-base">Kindly reach out to us for more information or details about any of the above policies.</p>
       </div>
       <CTA />
